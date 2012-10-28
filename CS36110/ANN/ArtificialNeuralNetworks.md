@@ -5,7 +5,7 @@
 
 Blue units = Input layer - the features of a single example in the training set X
 
-Red numbers = Theta - the weights of the input to the next layer.
+Red numbers = Theta - the weights of the input to the next layer. Assume that the network has finished training and these vlues of Theta are the results.
 
 ###Truth table with threshold activation function
 
