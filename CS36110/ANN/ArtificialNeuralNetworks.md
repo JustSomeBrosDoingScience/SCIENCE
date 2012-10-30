@@ -3,6 +3,8 @@
 ##Single Neuron to compute AND
 ![Neuron](https://github.com/JustSomeBrosDoingScience/SCIENCE/raw/ANN/CS36110/ANN/ann.png)
 
+*Why these numbers? - No reason in particular, they are simply in proportion (e.g. you can use -1.5, 1, and 1 for the weights and it will work the same.*
+
 Blue units = Input layer - the features of a single example in the training set X
 
 Red numbers = Theta - the weights of the input to the next layer.
