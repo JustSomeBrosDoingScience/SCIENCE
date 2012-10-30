@@ -20,4 +20,16 @@ Engineering and Physical Engineering and this was slowing things down:
 XP aims to make the cost of change lower through better communication between
 the team and the customer
 
+##Planning Game
+
+##Pair Programming
+
+XP has three distinct planning games:
+    * Initial Planning - before the project has started
+    * Release Planning - done throughout in order to determine when the next
+      stable release should be shipped
+    * Iteration planning - done each 'iteration' to determine what work needs
+      to be done before the next one.
+
+
 
