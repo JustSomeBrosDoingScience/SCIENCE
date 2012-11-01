@@ -37,6 +37,6 @@ It should be pointed out that the program doesn't actually carry out the calcula
 If you had a dataset of lots of different examples of the addition operation, such as 5+5=10, the program could learn how to add
 numbers together but not actually *do* the calculation. It's just rote learning.
 
-Here's a really shitty image of how the cost reduces as \$theta$ is changed - the function is supposed to be parabolic but looks hyperbolic because I cannott into MS Paint.
+Here's a really shitty image of how the cost reduces as \$theta$ is changed - the function is supposed to be parabolic but looks hyperbolic because I cannot into MS Paint.
 
 ![Gradient Descent](https://raw.github.com/JustSomeBrosDoingScience/SCIENCE/develop/CS36110/grad_descent.png)
