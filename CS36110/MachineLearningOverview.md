@@ -16,6 +16,12 @@ just like how you would manipulate the steering wheel in a car to make the car t
 physically pushing it under your own strength. The only thing you can change directly are these parameters.
 
 
+**Note about $\theta$: The term $\theta$ can change in meaning depending on which ML technique you're looking at.
+In terms of ANNs, $\theta$ refers to the matrices representing the weights between layers. In Linear Regression it's
+the parameters for the line-of-best-fit on the graph. What all these definitions have in common is that $\theta$
+is the value you can change to alter the output.**
+
+
 A simple (hurr) example as follows:
 
 > You want your algorithm to learn that 1+1=2 <- that right there is your whole training set.
