@@ -10,7 +10,7 @@
 > measured by P, improves with experience E.
 
 In short, machine learning is an iterative process that seeks to reduce the difference
-between the output it gets, given its inputs, and the desired output - this output is the *cost*
+between the output it gets and the desired output - this output is the *cost*
 of the current state of the program. It does this by manipulating the program's parameters, ($\theta$),
 just like how you would manipulate the steering in a car to make the car turn rather than
 open the door and drag your foot on the ground. The only thing you can change directly are these parameters.
