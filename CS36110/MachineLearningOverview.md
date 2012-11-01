@@ -15,7 +15,7 @@ of the current state of the program. It does this by manipulating the program's 
 just like how you would manipulate the steering in a car to make the car turn rather than
 open the door and drag your foot on the ground. The only thing you can change directly are these parameters.
 
-A simple (lol) example as follows:
+A simple (hurr) example as follows:
 
 > You want your algorithm to learn that 1+1=2 <- that right there is your whole training set.
 >
