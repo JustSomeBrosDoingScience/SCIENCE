@@ -13,7 +13,8 @@ In short, machine learning is an iterative process that seeks to reduce the diff
 between the output it gets and the desired output - this output is the *cost*
 of the current state of the program. It does this by manipulating the program's parameters, ($\theta$),
 just like how you would manipulate the steering wheel in a car to make the car turn rather than
-open the door and drag your foot on the ground. The only thing you can change directly are these parameters.
+physically pushing it under your own strength. The only thing you can change directly are these parameters.
+
 
 A simple (hurr) example as follows:
 
