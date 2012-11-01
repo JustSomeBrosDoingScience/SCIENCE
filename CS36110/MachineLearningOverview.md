@@ -12,8 +12,15 @@
 In short, machine learning is an iterative process that seeks to reduce the difference
 between the output it gets and the desired output - this output is the *cost*
 of the current state of the program. It does this by manipulating the program's parameters, ($\theta$),
-just like how you would manipulate the steering in a car to make the car turn rather than
-open the door and drag your foot on the ground. The only thing you can change directly are these parameters.
+just like how you would manipulate the steering wheel in a car to make the car turn rather than
+physically pushing it under your own strength. The only thing you can change directly are these parameters.
+
+
+*Note about $\theta$: The term $\theta$ can change in meaning depending on which ML technique you're looking at.
+In terms of ANNs, $\theta$ refers to the matrices representing the weights between layers. In Linear Regression it's
+the parameters for the hypothesis that tries to fit the data. What all these definitions have in common is that $\theta$
+is the value you can change to alter the output.*
+
 
 A simple (hurr) example as follows:
 
@@ -27,9 +34,9 @@ A simple (hurr) example as follows:
 > When you start out, your parameter, $\theta$, is typically a matrix of zeros. Sparing you the details of how this
 > happens for now, let's just say that after the very first iteration the *hypothesis*, or what your program thinks the
 > answer is given $\theta$ and your inputs, is something retarded like 0. The *cost* function, the result of which that
-> iteration just returned, is the difference between your hypothesis and the actual answer, so *1*.
+> iteration just returned, is the difference between your hypothesis and the actual answer, so *2*.
 >
-> 1 is not 0 so you iterate over the whole training set again - but before you do, you make a change to $\theta$ that you
+> 2 is not 0 so you iterate over the whole training set again - but before you do, you make a change to $\theta$ that you
 > know will yield the output you actually want - that change is called $\delta\theta$. You actually make these changes to
 > theta for each item in the training set within an iteration.
 
