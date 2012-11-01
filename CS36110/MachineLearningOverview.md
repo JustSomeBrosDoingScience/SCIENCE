@@ -32,3 +32,7 @@ A simple (lol) example as follows:
 > 1 is not 0 so you iterate over the whole training set again - but before you do, you make a change to $\theta$ that you
 > know will yield the output you actually want - that change is called $\delta\theta$. You actually make these changes to
 > theta for each item in the training set within an iteration.
+
+I should point out that the program doesn't actually carry out the calculation of *1+1*, all it does it map the inputs to outputs.
+If you had a dataset of lots of different examples of the addition operation, such as 5+5=10, the program could learn how to add
+numbers together but not actually *do* the calculation. It's just rote learning.
