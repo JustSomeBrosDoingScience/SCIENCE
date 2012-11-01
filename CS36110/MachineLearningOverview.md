@@ -18,7 +18,7 @@ physically pushing it under your own strength. The only thing you can change dir
 
 *Note about $\theta$: The term $\theta$ can change in meaning depending on which ML technique you're looking at.
 In terms of ANNs, $\theta$ refers to the matrices representing the weights between layers. In Linear Regression it's
-the parameters for the line-of-best-fit on the graph. What all these definitions have in common is that $\theta$
+the parameters for the hypothesis that tries to fit the data. What all these definitions have in common is that $\theta$
 is the value you can change to alter the output.*
 
 
