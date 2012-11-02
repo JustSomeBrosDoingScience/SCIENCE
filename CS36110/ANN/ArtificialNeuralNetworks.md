@@ -20,15 +20,15 @@ If g(z) is over the 'threshold' (0 in this case) then h(x) = 1; 0 otherwise.
     <th>X1</th><th>X2</th><th>g(z)</th><th>h(x)</th>
   </tr>
   <tr>
-    <td>0</td><td>0</td><td>g((-30 * 1)   +   (20 * 0)  +  (20 + 0)) = -30</td><td>0</td>
+    <td>0</td><td>0</td><td>g((-30 * 1)   +   (20 * 0)  +  (20 * 0)) = -30</td><td>0</td>
   </tr>
   <tr>
-    <td>0</td><td>1</td><td>g((-30 * 1)   +   (20 * 0)  +  (20 + 1)) = -10</td><td>0</td>
+    <td>0</td><td>1</td><td>g((-30 * 1)   +   (20 * 0)  +  (20 * 1)) = -10</td><td>0</td>
   </tr>
   <tr>
-    <td>1</td><td>0</td><td>g((-30 * 1)   +   (20 * 1)  +  (20 + 0)) = -10</td><td>0</td>
+    <td>1</td><td>0</td><td>g((-30 * 1)   +   (20 * 1)  +  (20 * 0)) = -10</td><td>0</td>
   </tr>
   <tr>
-    <td>1</td><td>1</td><td>g((-30 * 1)   +   (20 * 1)  +  (20 + 1)) = 30</td><td>1</td>
+    <td>1</td><td>1</td><td>g((-30 * 1)   +   (20 * 1)  +  (20 * 1)) = 30</td><td>1</td>
   </tr>
 </table>
