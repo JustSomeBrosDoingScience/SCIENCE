@@ -21,9 +21,9 @@ In terms of ANNs, $\theta$ refers to the matrices representing the weights betwe
 the parameters for the hypothesis that tries to fit the data. What all these definitions have in common is that $\theta$
 is the value you can change to alter the program's output.*
 
+*The cost function could be the 'squared error' function thusly:*
 
-![Cost
-Function](https://raw.github.com/JustSomeBrosDoingScience/SCIENCE/develop/CS36110/cost_function_example.png)
+![Cost Function](https://raw.github.com/JustSomeBrosDoingScience/SCIENCE/develop/CS36110/cost_function_example.png)
 
 A simple (hurr) example as follows:
 
