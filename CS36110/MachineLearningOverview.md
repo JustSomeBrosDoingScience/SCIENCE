@@ -37,8 +37,13 @@ A simple (hurr) example as follows:
 > iteration just returned, is the difference between your hypothesis and the actual answer, so the cost is *2-0=2*.
 >
 > 2 is not 0 so you iterate over the whole training set again - but before you do, you make a change to $\theta$ that you
-> know will bring the output a little bit closer to what you actually want - that change is called $\delta\theta$. You actually make these changes to
-> theta for each item in the training set within an iteration over the training set.
+> know will bring the cost closer to 0 and the hypothesis a little bit closer to what you actually want - that change is called $\delta\theta$. You actually make these changes to
+> theta for each item in the training set within an iteration over the training set. The idea is that, evetually, $\theta$
+> be a set of values that satisfy all items in the training set.
+
+> **In short**, If $\theta$ started out as 0, and your hypothesis is 0 after your first iteration over the whole training set,
+> you alter \$theta$ such that the function *cost($\theta$)* approaches 0 and, as a result, the hypothesis approache the
+> correct answer. Do this as many times as necessary.
 
 I should point out that the program doesn't actually carry out the calculation of *1+1*, all it does it map the inputs to outputs.
 If you had a dataset of lots of different examples of the addition operation, such as 5+5=10, the program could learn how to add
