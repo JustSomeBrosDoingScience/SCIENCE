@@ -54,6 +54,7 @@ numbers together that it has never seen before but not actually *do* the calcula
 
 *Note: It is possible to use ML to learn how to carry out the calcultions but that is rather advanced.*
 
-Here's a really shitty image of how the cost reduces as \$theta$ is changed - **Gradient Descent** - the function is supposed to be parabolic but looks hyperbolic because I cannot into MS Paint.
+##Gradient Descent
+Here's a really shitty image of how the cost reduces as \$theta$ is changed - the function is supposed to be parabolic but looks hyperbolic because I cannot into MS Paint.
 
 ![Gradient Descent](https://raw.github.com/JustSomeBrosDoingScience/SCIENCE/develop/CS36110/grad_descent.png)
