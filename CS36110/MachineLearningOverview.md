@@ -22,6 +22,9 @@ the parameters for the hypothesis that tries to fit the data. What all these def
 is the value you can change to alter the program's output.*
 
 
+![Cost
+Function](https://raw.github.com/JustSomeBrosDoingScience/SCIENCE/develop/CS36110/cost_function_example.png)
+
 A simple (hurr) example as follows:
 
 > You want your algorithm to learn that 1+1=2 <- that right there is your whole training set.
