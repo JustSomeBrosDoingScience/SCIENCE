@@ -11,7 +11,7 @@ Red numbers = Theta - the weights of the input to the next layer. Assume that th
 
 ###Truth table with threshold activation function
 
-g(Theta0 * X0   +   Theta1 * X1  +  Theta2 + X2)
+g(Theta0 * X0   +   Theta1 * X1  +  Theta2 * X2)
 
 If g(z) is over the 'threshold' (0 in this case) then h(x) = 1; 0 otherwise.
 
