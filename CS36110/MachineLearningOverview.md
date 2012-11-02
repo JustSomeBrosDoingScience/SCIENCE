@@ -1,7 +1,7 @@
 ## Machine Learning Like You're 5
 
 *There's a class on [coursera.org](coursera.org/course/ml) covering much, if not all, of the syllabus of CS361.
-It is highly recommended that you go through the content of that course too since Prof. Andrew Ng is basically God.
+It is highly recommended that you go through the content of that course too since Prof. Andrew Ng is basically God.*
 
 
 # General Principle
