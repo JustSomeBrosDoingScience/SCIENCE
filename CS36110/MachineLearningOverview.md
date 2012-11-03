@@ -29,6 +29,8 @@ is the value you can change to alter the program's output.*
 
 ![Cost Function](https://raw.github.com/JustSomeBrosDoingScience/SCIENCE/develop/CS36110/cost_function_example.png)
 
+*That's (1/2m), I'll change the image when I can be bothered XD.
+
 A simple (hurr) example as follows:
 
 > You want your algorithm to learn that 1+1=2 <- that right there is your whole training set.
