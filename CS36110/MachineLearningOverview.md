@@ -33,6 +33,10 @@ is the value you can change to alter the program's output.*
 
 A simple (hurr) example as follows:
 
+
+*Addendum by James: Where Craig talks about 'Cost', the ML lady has been
+talking about 'Error Function'.
+
 > You want your algorithm to learn that 1+1=2 <- that right there is your whole training set.
 >
 > The size of the training set, **m**, is *1*, the vector **x** is the input, *1+1*, and your desired output, **y**, is *2*.
