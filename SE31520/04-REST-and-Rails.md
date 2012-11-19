@@ -20,3 +20,23 @@ URL Based Routing
 * `*_url` provides `http://example.com/path` based navigation. I noted something about redirection.
 
 
+Pure Matching
+-------------
+
+```ruby
+match 'path/:param' => controller#action
+```
+
+All routes are processed in order.
+
+
+Respond to methods
+------------------
+
+```ruby
+respond_to do |format|
+    format.type(params)
+end
+```
+
+Will try to use the URL format, if not it will use the accept header. See also `respond_with`.
