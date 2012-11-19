@@ -144,6 +144,12 @@ Run `rake test:units` to run in isolation. Be warned that this is slow as it loa
 rails framwork into memory to do this.
 
 
+Functional Tests in Rails
+-------------------------
+Test correct behaviour rather than whether a method is doing what it should do. With rails this is
+typically the HTTP Request and Response codes.
+
+
 Required Versions
 -----------------
 * Ruby 1.9.3+
