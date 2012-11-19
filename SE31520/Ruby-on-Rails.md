@@ -1,6 +1,7 @@
 Ruby on Rails
 =============
 
+
 Ruby
 ----
 Ruby is a dynamically typed, pure object-orientated language. It's also something that most people
@@ -32,6 +33,7 @@ out there one can use for reference.
 
 Rails also has a lot of resusable components available (Gems, plug-ins, etc.).
 
+
 Rails Design Philospohy
 -----------------------
 Rails follow the Don't Repeat Yourself (DRY) philosophy. You should define things once and once 
@@ -40,12 +42,14 @@ only.
 It also follows convention over configuration, therefore providing sensible defaults and code 
 generation to follow the Model View Controller (MVC) design pattern.
 
+
 Overview of the Rails Architecture
 ----------------------------------
 TODO Image here.
 
 Generic Multi-teir Architechture:
 TODO Another image here.
+
 
 Rails Applications
 ------------------
@@ -65,6 +69,7 @@ Rails Applications
 
 It should be noted that Gems are system-wide and plugins are application specific.
 
+
 Rails MVC
 ---------
 Rails has a lot of conventions with it's code:
@@ -77,6 +82,7 @@ Tables, views, and most other things are names as plurals (e.g. Users, Objects, 
 
 A top level controller, the application controller, provides common code to all other controllers
 used in the rails application. All other controllers should extend this.
+
 
 Rails Database Management
 -------------------------
@@ -92,6 +98,7 @@ You can add index to the databases via the migration files in the following way:
 ```ruby
 add_index :token, field
 ```
+
 
 Rails Layouts
 -------------
@@ -109,10 +116,39 @@ Ruby tries to prevent cross-site request forgeries using: `<%= csrf_meta_tags %>
 
 Chris also mentioned HAML being better than `html.erb`.
 
+
+Testing Rails
+-------------
+Ruby being a dynamically typed language, testing is essential. In fact test-driven development is
+advised when programming Ruby.
+
+Test fixtures set up the test data.
+
+Functional Tests test controllers.
+
+Integration Tests test controllers working along a sequence.
+
+The scaffolder generates a lot of these tests for you.
+
+Chris also mentiond RSpec and Cucumber as behaviour driven testing libraries.
+
+
+Unit Tests in Rails
+-------------------
+
+```ruby
+class UT extend ActiveSupport::TestCase
+```
+
+Run `rake test:units` to run in isolation. Be warned that this is slow as it loads the whole of the
+rails framwork into memory to do this.
+
+
 Required Versions
 -----------------
 * Ruby 1.9.3+
 * Rails 3.2.8+
+
 
 Reading List
 ------------
