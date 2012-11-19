@@ -44,6 +44,25 @@ Overview of the Rails Architecture
 ----------------------------------
 TODO Image here.
 
+Generic Multi-teir Architechture:
+TODO Another image here.
+
+Rails Applications
+------------------
+* `apps/` Contains the MVC generated code.
+* `config/` Configuration files for things like databases and routes.
+* `db/` Database descriptors. Includes migration files (allows the database to be changed without too much pain).
+* `doc/` Documentation.
+* `lib/` Internal libraries (authors note: I think at least).
+* `log/` Log files.
+* `public/` Static content.
+* `test/` Testing code.
+* `vendor/` Plugins local to the application.
+* `Gemfile` Defines all the gems used by the application.
+* `Rakefile` Ruby makefile.
+
+It should be noted that Gems are system-wide and plugins are application specific.
+
 Required Versions
 -----------------
 * Ruby 1.9.3+
