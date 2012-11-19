@@ -32,6 +32,10 @@ Methods of Interoperability
 * Sockets
 * Remove Method Invokation (RMI) and Remote Procedure Call (RPC)
 * Message-based.
+* XML-Based
+* XML Remote Procedure Call
+* SOAP
+* REST
 
 
 Sockets
@@ -79,5 +83,60 @@ Disadvantages:
 * Typically proprietary.
 * Requires a message broker.
 
+
+XML-Based
+---------
+Can be XML-RPC or SOAP/WSDL.
+
+Have the advantage of being language and platform inderpendant, and have descriptors (XSD).
+
+
+XML Remote Procedure Call
+-------------------------
+
+Advantages:
+* Similar to RMI/CORBA
+* Evolved into SOAP
+* Service represented by a single URL.
+* Operation defined by the XML body of the HTTP Request (which is a POST).
+* Scoping depends on context.
+
+Disadvantages:
+* Doesn't use all HTTP methods (only POST). Is a special protocol.
+* Resources not identified explicitly.
+* Unknown side-effects.
+
+
+SOAP
+----
+
+Advantages:
+* Runs over HTTP(S).
+* RPC and XML.
+* Application-level.
+* WSDL defines service operations.
+* UDDI (Universtal Description Discovery Initiative) - A registry containing info about web 
+  services (e.g. URL).
+
+TODO Diagram here.
+
+Disadvantages:
+* Same issues as XML-RPC
+* Complex specification.
+* Inprecise specification.
+* Specification was developed inderpendantly.
+
+REST
+----
+
+* Get
+* Post (New)
+* Put (Update)
+* Delete
+* Head
+
+REST is inheritantly HTTP focused. As such all resources have a URL.
+
+TODO Diagram here.
 
 
