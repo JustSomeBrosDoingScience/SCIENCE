@@ -18,10 +18,10 @@ Interoperability
 Operating between systems. This can be:
 
 * Within an organisation (i.e. within an intranet).
-** App to App (A2A)
-** Enterprise Application Integration (EAI)
+     * App to App (A2A)
+     * Enterprise Application Integration (EAI)
 * Between Organisations
-** Business to Business (B2B)
+     * Business to Business (B2B)
 
 As a side note middleware supports interoperability (see CICS for a great example :D)
 
