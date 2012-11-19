@@ -51,17 +51,63 @@ Rails Applications
 ------------------
 * `apps/` Contains the MVC generated code.
 * `config/` Configuration files for things like databases and routes.
-* `db/` Database descriptors. Includes migration files (allows the database to be changed without too much pain).
+* `db/` Database descriptors. Includes migration files (allows the database to be changed without 
+  too much pain).
 * `doc/` Documentation.
 * `lib/` Internal libraries (authors note: I think at least).
 * `log/` Log files.
 * `public/` Static content.
 * `test/` Testing code.
 * `vendor/` Plugins local to the application.
-* `Gemfile` Defines all the gems used by the application.
+* `Gemfile` Defines all the gems used by the application. Note that if no version is specified then
+  the latest version of the gem will be installed.
 * `Rakefile` Ruby makefile.
 
 It should be noted that Gems are system-wide and plugins are application specific.
+
+Rails MVC
+---------
+Rails has a lot of conventions with it's code:
+
+Actions related to the HTTP Request methods (i.e. REST).
+
+Models are named as singular objects (e.g. User, Object, etc.).
+
+Tables, views, and most other things are names as plurals (e.g. Users, Objects, etc.).
+
+A top level controller, the application controller, provides common code to all other controllers
+used in the rails application. All other controllers should extend this.
+
+Rails Database Management
+-------------------------
+Rails has three different databases:
+* Development
+* Production
+* Test
+
+All three of these are self-contained.
+
+You can add index to the databases via the migration files in the following way:
+
+```ruby
+add_index :token, field
+```
+
+Rails Layouts
+-------------
+The main application template is found in: `app/views/layouts/application.html.erb`.
+
+The default CSS is found in: `?/scaffold.css.scss`. Rails uses SASS CSS, a more powerful varient of
+CSS.
+
+In `.erb` files there are several different tags for embedding ruby:
+
+* `<%= ... %>` For embedded Ruby with a return value.
+* `<% ... %>` For embedded Ruby with no return value, or where the return value shouldn't be printed.
+
+Ruby tries to prevent cross-site request forgeries using: `<%= csrf_meta_tags %>`
+
+Chris also mentioned HAML being better than `html.erb`.
 
 Required Versions
 -----------------
