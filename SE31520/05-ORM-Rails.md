@@ -83,3 +83,97 @@ save, save!, create, create!
 
 As a side note, `create` shouldn't have an id on fail.
 
+Delete
+------
+
+```ruby
+ActiveRecord.delete(id) # Can be a range too
+
+ActiveRecord.delete_all(??)
+
+ActiveRecord.destroy(activeRecord)
+
+ActiveRecord.destroy(id) # Will search and find the instance first.
+```
+
+In the class you can define `before_destroy: callback` and `after_destroy: callback`.
+This is true of all CRUD operations. Also note that these will cascade and be run in
+the correct order for those models with relationships.
+
+
+Retrieve
+--------
+
+```ruby
+ActiveRecord.find(id) # May raise RecordNotFoundError
+
+ActiveRecord.all()
+
+ActiveRecord.where(params) # [] if not found
+
+ActiveRecord.where("params=?", values) # Escaped to SQL
+```
+
+Note that `.where("param = #{var}")` is prone to SQL injection.
+
+```ruby
+ActiveRecord.where("param = :var", var: var)
+
+ActiveRecord.where(params[:user]) # Maps to SQL.
+```
+
+Be careful about exposing the database to views. See http://rubyonrails.orb/security.html.
+
+```ruby
+ActiveRecord.where("thing like ?", thing + "%") # Wildcards
+
+ActiveRecord.where(?).first()
+
+ActiveRecord.where(?).last()
+
+ActiveRecord.where(?).order(?)
+
+ActiveRecord.where(?).limit(?)
+
+ActiveRecord.where(?).offset(?)
+
+ActiveRecord.where(?).joins(?)
+
+ActiveRecord.select(?)
+
+ActiveRecord.uniq.where(jobs: true).limit(2).pluck(:surname) # SELECT DISTINCT firstname WHERE jobs='t' LIMIT 2
+
+ActiveRecord.readonly(?)
+```
+
+Full SQL
+--------
+
+```ruby
+ActiveRecord.find_by_sql([sql])
+```
+
+Use this for performance reasons or hard queries. Remember premature optimisation is the root of all evil.
+
+Find By
+-------
+
+```ruby
+ActiveRecord.find_by_attname
+
+ActiveRecord.find_by_attname_and_att2name
+```
+
+Where `attname` is the literal name of the attribute.
+
+
+ActiveRecord and Relationships
+------------------------------
+
+Cached in a given action.
+
+```ruby
+thing.relation.att
+
+thing.relation(true).att # Force Reload.
+```
