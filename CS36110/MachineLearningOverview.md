@@ -44,7 +44,7 @@ talking about 'Error Function'.
 > In the training stage, you iterate over this training set as many times as you need to get the *cost*
 > as close to zero as possible or for a predetermined number of iteations - whichever comes first.
 >
-> When you start out, your parameter, $\theta$, is typically a matrix of zeros. Sparing you the details of how this
+> When you start out, your parameter, $\theta$, is typically a matrix of random values between +/- 0.12 ($\epsilon$). Sparing you the details of how this
 > happens for now, let's just say that after the very first iteration the *hypothesis*, what your program thinks the
 > answer is given $\theta$ and your inputs, is something retarded like 0. The *cost* function, the result of which that
 > iteration just returned, is the difference between your hypothesis and the actual answer, so the cost is *2-0=2*.
