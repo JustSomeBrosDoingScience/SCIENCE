@@ -10,7 +10,8 @@ development teams.
 ##Rationale
 
 Beck decided that people were drawing too many parallels between Software
-Engineering and Physical Engineering and this was slowing things down:
+Engineering and Physical Engineering and this was slowing things down:a
+
 * Software is much more malleable than physics
 * There are fewer costs involved with changing things later on (in construction
   you might have already purchased the materials for your bridge)
@@ -25,6 +26,7 @@ the team and the customer
 ##Pair Programming
 
 XP has three distinct planning games:
+
     * Initial Planning - before the project has started
     * Release Planning - done throughout in order to determine when the next
       stable release should be shipped
@@ -32,4 +34,5 @@ XP has three distinct planning games:
       to be done before the next one.
 
 
+##Crack Customer
 
