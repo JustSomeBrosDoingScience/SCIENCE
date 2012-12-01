@@ -51,4 +51,8 @@ $p(F_i|C,F_j) = p(F_i|C)$
 ## MAP - Maximum Aposteriori Hypothesis
 
 This allows us to extract the most probable hypothesis given the training data
-set $D$.
+set $D$. Finding the MAP is less computationally demanding and can also be used
+to reduce the risk of Overfitting - it is a natural embodiment of *Ockham's
+Razor.* 
+
+
