@@ -2,13 +2,6 @@
 
 #Introduction
 
-A couple of important probability maths things you need to know are:
-
-$P(A \cap B) = P(A)P(B)$
-
-$P(A | B) = \frac{P(B | A)P(A)}{P(B)}$
-
-
 Most Machine Learning techniques try to learn one hypothesis function for all
 of the given data. However, this is not always the best approach - especially
 when there are several reasonably likely hypotheses for a problem. Take the
@@ -37,4 +30,25 @@ making predictions based on *all* hypotheses, weighted by their probabilities
 rather than using a single best hypothesis. This means learning comes down to
 probabalistic inference.
 
+We can use Bayes' rule to work out the probability of a hypothesis ($h_i$)
+given a flavour($d$). This is shown as
 
+$p(h_i|d) = \frac{p(d|h_i)p(h)}{p(d)}$
+
+if we know $d$ because we observed it, then $p(d)=1$ and our equation
+becomes:
+
+$p(h_i|d) = p(d|h_i)p(h)$
+
+## Naivity is key
+
+In Naive Bayesian learning, we always assume that each feature of the data set
+$F_i$ is independent of every other feature $F_j$ for $i \ne j$ such that "the
+probability of 
+$p(F_i|C,F_j) = p(F_i|C)$ 
+
+
+## MAP - Maximum Aposteriori Hypothesis
+
+This allows us to extract the most probable hypothesis given the training data
+set $D$.
