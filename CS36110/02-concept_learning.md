@@ -99,3 +99,34 @@ VS_{H,D} \equiv \{h \in H | consistent(h,D)\}
 $$
 
 (Most) Specific $\rightarrow$ (Most) General are the only required $h$, others can be generated from these two.
+
+
+List-then-Eliminate
+-------------------
+
+```
+VS = H
+
+for(<x, c(x)>):
+  remove h if h(x) != c(x)
+
+output VS
+```
+
+Guarentees all H consistent, required to enumerate all in H.
+
+
+Induction Bias
+--------------
+$L$: Convept Learning als[sic?]
+$X$: Instance space.
+$c$: Target function.
+$D_{L} = {<x,c(x)>}: Training data.
+
+$$
+D_{i}: (\forall x_{i} \in X)[(B \union D_{i} \union x_{i} \vdash L(x_{i}, D_{i})]
+$$
+
+For reference:
+
+$A \vdash B$: $A$ entails $B$.
