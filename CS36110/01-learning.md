@@ -32,3 +32,9 @@ The training data takes the form of an input:output mapping. The input is usuall
 If $output \in R$ then the algorithm is ??? (I turned off here).
 
 Learning is supervised is the output of the training data is known.
+
+We define this experience in the form
+
+$y = f(x)$
+
+Where: $y$ is the outcome and $x$ is the parameters. We use $f$ to map 
