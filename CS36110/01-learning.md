@@ -29,6 +29,6 @@ To have achived learning you must improve the performance of the system in some 
 
 The training data takes the form of an input:output mapping. The input is usually some form of vector and the output can take the form of a real, discrete or categorical value.
 
-If $output \in \mathds{R}$ then the algorithm is ??? (I turned off here).
+If $output \in R$ then the algorithm is ??? (I turned off here).
 
 Learning is supervised is the output of the training data is known.
