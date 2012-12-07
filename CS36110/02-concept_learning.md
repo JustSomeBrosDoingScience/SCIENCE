@@ -10,7 +10,7 @@ Notation and Terms
 
 * $x$ - Instance Space (constraints).
 * $c$ - Target Concept (to be learned).
-* $\<x, c(x)\>$ - Training examples $D$.
+* $<x, c(x)>$ - Training examples $D$.
 * $H$ - Hypothesis space.
 * $h$ - A single hypothesis where $h \in H$.
 * $X: h:X \rightarrow \{0,1\}$
@@ -62,15 +62,15 @@ return h
 
 For example:
 
-$$h_0 = \<E, L, I, W, R\>$$
+$$h_0 = <E, L, I, W, R>$$
 
-$$x_1 = \<M, L, I, W, R\>$$
+$$x_1 = <M, L, I, W, R>$$
 
-$$h_1 = \<?, L, I, W, R\>$$
+$$h_1 = <?, L, I, W, R>$$
 
-$$x_2 = \<E, H, I, N, R\>$$
+$$x_2 = <E, H, I, N, R>$$
 
-$$h_2 = \<?, ?, I, ?, R\>$$
+$$h_2 = <?, ?, I, ?, R>$$
 
 Only works when:
 * $f \in H$
@@ -89,13 +89,13 @@ Candidate Elimination
 Finds all describable $h$ if $h$ is consistent with $D$ iff $h(x) = c(x)$ for $<x, c(x)> \in D$
 
 $$
-consistent(h,D) \equiv (\forall\<x,c(x)\> \in D) h(x) = c(x)
+consistent(h,D) \equiv (\forall <x,c(x)> \in D) h(x) = c(x)
 $$
 
 Version space:
 
 $$
-VS_{HD} \equiv \{h \in H | consistent(h,D)\}
+VS_{H,D} \equiv \{h \in H | consistent(h,D)\}
 $$
 
 (Most) Specific $\rightarrow$ (Most) General are the only required $h$, others can be generated from these two.

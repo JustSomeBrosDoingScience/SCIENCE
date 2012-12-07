@@ -1,15 +1,14 @@
 Learning
 ========
-
 Knowledge is gained through learning from experience. Normally to apply knowledge we have to makes some form of assumtions, we call this bias in IL. Therefore our knowledge is not always correct.
 
 We can learn from both sucess and failure.
 
 Learning is an abstract process, we cannot formalise how we as humans actually learn.
 
+
 AI Systems
 ----------
-
 TODO image here.
 
 The advantages of this are as follows:
@@ -29,37 +28,39 @@ To have achived learning you must improve the performance of the system in some 
 
 The training data takes the form of an input:output mapping. The input is usually some form of vector and the output can take the form of a real, discrete or categorical value.
 
-If $output \in R$ then the algorithm is ??? (I turned off here).
+If 
+$$output \in R$$
+then the algorithm is ??? (I turned off here).
 
 Learning is supervised is the output of the training data is known.
 
+
 Definitions
 -----------
-
 We define this experience in the form
 
-$y = f(x)$
+$$y = f(x)$$
 
 Where: $y$ is the outcome and $x$ is the parameters. We use $f$ to map $x$ to $y$. $f$ is usually unknown as it's the aim for learning.
 
 We guess $f$ using hypotheses $H$. Each hypothesis $h$ is an approximation of $f$ from the training data in various methods (e.g. Expectation Maximisation, Optimisation, etc.).
 
-Give expereicence $<1:0>(i=1,2,...)$ we define a target $h:1 -> 0$. We then optimise the objective function:
+Give expereicence $<1:0>(i=1,2,...)$ we define a target $h:1 \rightarrow 0$. We then optimise the objective function:
 
-$\min_h{\sum_i{O^\^_i - O_i)}}$
+$$\min\sum(O^^_i - O_i)$$
 
-Where $O^\^$ is the actual output and $O$ is the desired output.
+Where $O^^$ is the actual output and $O$ is the desired output.
 
 TODO graph here.
 
 In the above graph $h1$ accounts for noise. $h2$ is accurate if the training data is known not to be noisy. Both of these require some form of prior knowledge of the data set.
 
+
 Performance
 -----------
-
 The error rate is defined as:
 
-$E = \frac{e}{p}$
+$$E = e \div p$$
 
 Where $E$ is the error rate, $e$ is the errors and $p$ is the predictions.
 
