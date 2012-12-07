@@ -119,8 +119,11 @@ Guarentees all H consistent, required to enumerate all in H.
 Induction Bias
 --------------
 $L$: Convept Learning als[sic?]
+
 $X$: Instance space.
+
 $c$: Target function.
+
 $D_{L} = {<x,c(x)>}: Training data.
 
 $$
