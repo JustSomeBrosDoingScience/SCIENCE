@@ -124,7 +124,7 @@ $c$: Target function.
 $D_{L} = {<x,c(x)>}: Training data.
 
 $$
-D_{i}: (\forall x_{i} \in X)[(B \union D_{i} \union x_{i} \vdash L(x_{i}, D_{i})]
+D_{i}: (\forall x_{i} \in X)[(B \cap D_{i} \cap x_{i}) \vdash L(x_{i}, D_{i})]
 $$
 
 For reference:
