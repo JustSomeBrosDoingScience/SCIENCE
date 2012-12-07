@@ -10,10 +10,10 @@ Notation and Terms
 
 * $x$ - Instance Space (constraints).
 * $c$ - Target Concept (to be learned).
-* $<x, c(x)>$ - Training examples $D$.
+* $\<x, c(x)\>$ - Training examples $D$.
 * $H$ - Hypothesis space.
 * $h$ - A single hypothesis where $h \in H$.
-* $X: h:X \rightarrow {0,1}$
+* $X: h:X \rightarrow \{0,1\}$
 
 Learning goal is to find a $h$ to satisfy:
 
@@ -30,7 +30,7 @@ $$h = {math=difficult, workload=hard, presentation=dull, application=?, referenc
 
 Concept learning can be defined as a search.
 
-* Theoretical: $2^{|H|} - 1$
+* Theoretical: $2^\{|H|\} - 1$
 * Syntatian: $\prod_i x + 2$ (includes $?$ and $0$).
 * Semantical: $1 + \prod_i x + 1$ (includes $?$ and $0$ as single states).
 
@@ -38,9 +38,9 @@ Ordering of H
 -------------
 $x$ satisfies $h$ iff $h(x)=1$.
 
-$h_i$ generalised to $h_j$
+$h_{i}$ generalised to $h_{j}$
 
-$h_j$ specialised to $h_i$
+$h_{j}$ specialised to $h_{i}$
 
 Rote Learning
 -------------
@@ -62,17 +62,15 @@ return h
 
 For example:
 
-$$
-h_0 = <E, L, I, W, R>
+$$h_0 = \<E, L, I, W, R\>$$
 
-x_1 = <M, L, I, W, R>
+$$x_1 = \<M, L, I, W, R\>$$
 
-h_1 = <?, L, I, W, R>
+$$h_1 = \<?, L, I, W, R\>$$
 
-x_2 = <E, H, I, N, R>
+$$x_2 = \<E, H, I, N, R\>$$
 
-h_2 = <?, ?, I, ?, R>
-$$
+$$h_2 = \<?, ?, I, ?, R\>$$
 
 Only works when:
 * $f \in H$
@@ -91,13 +89,13 @@ Candidate Elimination
 Finds all describable $h$ if $h$ is consistent with $D$ iff $h(x) = c(x)$ for $<x, c(x)> \in D$
 
 $$
-consistent(h,D) \equiv (\forall<x,c(x)> \in D) h(x) = c(x)
+consistent(h,D) \equiv (\forall\<x,c(x)\> \in D) h(x) = c(x)
 $$
 
 Version space:
 
 $$
-VS_{H,D} \equiv {h \in H | consistent(h,D)}
+VS_{HD} \equiv \{h \in H | consistent(h,D)\}
 $$
 
 (Most) Specific $\rightarrow$ (Most) General are the only required $h$, others can be generated from these two.
