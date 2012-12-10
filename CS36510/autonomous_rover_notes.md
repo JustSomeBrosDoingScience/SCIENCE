@@ -37,6 +37,30 @@
 
 ## Obstacle Avoidance
 
-* Reactive Control - sometimes stumbles upon local minima
+* Reactive Control - sometimes stumbles upon local minima but much faster
 * Deliberative Control - Generate a map of the environment and plan the route
-  around obstacles etc.
+  around obstacles etc. Slower and more computationally expensive.
+
+## Path Finding
+
+* A* Works if you have a good model of your world and it doesn't change.
+* D* Allows you to modify your existing model to avoid new obstacles etc.
+  Avoids throwing away a working model and rebuilding from scratch by updating
+  path costs dynamically.
+* CMU Navigation Architecture
+* Global planner uses D* 
+* Arbiter combines Global planner with 'Morphin' which is the local navigation
+  system
+
+
+### Morphin
+
+1) Black areas have not been seen before
+2) Grey areas - recent, less recent and old data
+3) Textured areas are obstacles
+4) sensing arcs 'whiskers' based on steering arcs - mapping each steering
+trajectory to see if you're going to collide with anything.
+5) Goodness histogram  - sensing arc cells occupancy - refer to how traversable
+each whisker is.
+6) Certainty histogram - cell data age
+7) Traversability histogram - weighted combination of goodness and certainty.
