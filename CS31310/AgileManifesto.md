@@ -25,4 +25,14 @@ direct interaction of individuals often allows much more effective
 communication of ideas and problems. For example, if developers are encouraged
 to use a bug tracker rather than approach each other directly, then serious
 problems may be temporarily overlooked and placed on a virtual backlog
-instead.
+instead and not getting resolved. If developers interact and discuss issues
+then real progress can be made to resolve them rather than ignoring them for a
+few more iterations.
+
+> Working software over comprehensive documentation
+
+The traditional waterfall model (W Royce, 1970) focuses very heavily on
+comprehensive documentation and making sure that all aspects of the software
+have been designed and written up before any programming happens. In agile, it
+is better to have software that works even if the documentation isn't fully
+functional since clients can't deploy and run documents.
