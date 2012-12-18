@@ -37,4 +37,14 @@ atmosphere means that a very large envelope would be needed for a balloon-based
 aerobot or alternatively a high-yield motor or engine would need to be running
 constantly on a fixed wing aircraft. 
 
-## Communication Longevity and survivability
+## Communication 
+
+Many of the concerns over communication for a Titan Aerobot also hold true for
+a martian Aerobot. The distance of Mars from Earth means that data transmission
+takes around 13 minutes which means real-time comms are not practical. The
+vehicle's constant motion also means that it would be difficult for a Martian
+Aerobot to coordinate itself with an orbiter 
+
+##Longevity and survivability
+
+
