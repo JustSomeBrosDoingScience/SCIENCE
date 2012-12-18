@@ -17,8 +17,14 @@ In no particular order:
 * *Localisation* of a Martian aerobot presents significantly less of a
   challenge than on titan. There are several comprehensive maps of the martian
   surface since the atmosphere is a lot easier to penetrate. Therefore,
-  terrain-based localisation is an option. There is also the option of
-  sun-based localisation
+  terrain-based localisation is an option. The problem of Martian localisation
+  has already been solved very effectively using NASA'S MER Localisation
+  solution. The algorithm developed by Ron Li is used to capture stereo images
+  of terrain and process this data to extract 'interesting points.' The rover
+  then circles the rocks gathering more image data of the same rocks from
+  different angles and storing data on each rock to form an *analytical rock
+  model.* The rover can use rock matching before and after traversing different
+  rock distributions and localise itself relative to each site in it's memory.
 * Navigation
 * Communication
 * Longevity and survivability
