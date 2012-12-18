@@ -31,7 +31,10 @@ where the aerobot currently is.
 ## Navigation
 
 Navigation for a martian aerobot should be quite straight forward in terms of
-current location and target location. However, propulsion technology would be
-significantly more challenging to set up.
-* Communication
-* Longevity and survivability
+current location and determination of a target location. However, propulsion
+technology would be significantly more challenging to set up. Mars' thin
+atmosphere means that a very large envelope would be needed for a balloon-based
+aerobot or alternatively a high-yield motor or engine would need to be running
+constantly on a fixed wing aircraft. 
+
+## Communication Longevity and survivability
