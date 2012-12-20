@@ -37,4 +37,18 @@ atmosphere means that a very large envelope would be needed for a balloon-based
 aerobot or alternatively a high-yield motor or engine would need to be running
 constantly on a fixed wing aircraft. 
 
-## Communication Longevity and survivability
+## Communication 
+Like on titan, an aerobot on Mars would also have trouble communicating with
+Earth. There is a 9 minute time delay between Mars and Earth meaning that
+realtime communication is not possible. There are also power concerns since
+long range communications are very power hungry. Such comms are usually
+offloaded to an orbiter by rovers. However, the mobile nature of an aerobot
+makes communication with an orbiter more difficult. One possible solution could be
+to deploy an array of orbiters so that the aerobot could communicate with the
+closest device. Alternatively, a geo-stationary orbital device could be set up
+and the aerobot could return to the orbiter when it needed to communicate with
+earth.
+
+## Longevity and survivability
+
+
