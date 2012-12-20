@@ -38,6 +38,7 @@ aerobot or alternatively a high-yield motor or engine would need to be running
 constantly on a fixed wing aircraft. 
 
 ## Communication 
+
 Like on titan, an aerobot on Mars would also have trouble communicating with
 Earth. There is a 9 minute time delay between Mars and Earth meaning that
 realtime communication is not possible. There are also power concerns since
@@ -51,4 +52,12 @@ earth.
 
 ## Longevity and survivability
 
-
+The relative longevity and survivability of a martian aerobot in comparison to
+a rover would be significantly shorter. A fixed wing aerobot would need
+constant energy to keep moving in the thin atmosphere of Mars. Even with the
+addition of Solar Panels, such a device owuld not be able to collect/generate
+as much energy as it was using during its motion. An LTA balloon-based aerobot
+could last for significantly longer than a fixed wing aerobot provided that
+leakage from the envelope was minimal. There would still need to be a way of
+collecting or generating energy since high-capacity batteries and RTG systems
+are very heavy and would weigh an LTA device down significantly.
