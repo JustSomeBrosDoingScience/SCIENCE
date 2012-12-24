@@ -32,4 +32,44 @@ We apply Occam's Razor to this problem, that is the best solution is the best so
 
 The search we use to find a tree is a greedy hueristic where the main decision is for the next attributes.
 
-We try to find the purest attribute to split on at the current point in the [TBC...]
+We try to find the purest attribute to split on at the current point in the tree.
+
+Example:
+
+${(A=0, B=0), -}: 50$
+
+${(A=0, B=1), -}: 0$
+
+${(A=1, B=0), -}: 0$
+
+${(A=1, B=1), +}: 100$
+
+Splitting on $A$ in this example gives pure labels (I think I copied this down wrong). Splitting on $B$ doesn't.
+
+
+Entropy
+-------
+
+$S$ -> Training data
+
+$p_+$ -> Positive examples in $S$
+
+$p_-$ -> Negative examples in $S$
+
+$Entropy(S) = - p_+ log_2(p_+) - p_- log_2(p_-)$
+
+Baring in mind that $p_- = 1 - p_+$
+
+The least pure is $p_+ = 0$
+
+More generally:
+
+$Entropy(S) = \sum_i(-p_i log_2(p_i)$
+
+
+Information Gain
+----------------
+
+$Gain(S,A)$ is the expected reduction of Entropy due to sorting on $A$.
+
+$Gain(S,A) = Entropy(S) - \sum_{u \in Values(A)}\frac{|S_u|}{|S|}Entropy(S)$
