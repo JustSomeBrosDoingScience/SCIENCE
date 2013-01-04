@@ -12,13 +12,15 @@ AI Systems
 TODO image here.
 
 The advantages of this are as follows:
+
 * This is often more accurate than humans.
 * Humans are often incapable of expressing the result.
 * Automatic method to search for the hypothesis explains the data.
 * Cheap and flexible.
 
 However the downsides are that:
-* There's a need for a lot of labelled data.
+
+* There is a need for a lot of labelled data.
 * Error-prone and inheritantly imperfect.
 * Difficult to discern what has actually been learnt.
 
@@ -41,7 +43,7 @@ We define this experience in the form
 
 $$y = f(x)$$
 
-Where: $y$ is the outcome and $x$ is the parameters. We use $f$ to map $x$ to $y$. $f$ is usually unknown as it's the aim for learning.
+Where: $y$ is the outcome and $x$ is the parameters. We use $f$ to map $x$ to $y$. $f$ is usually unknown as it is the aim for learning.
 
 We guess $f$ using hypotheses $H$. Each hypothesis $h$ is an approximation of $f$ from the training data in various methods (e.g. Expectation Maximisation, Optimisation, etc.).
 

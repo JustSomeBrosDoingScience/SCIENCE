@@ -4,6 +4,7 @@ CS36110 Machine Learning
 Should really be known as Intelligent Learning.
 
 Taught by:
+
 * Younghuai Lio (yyl)
 * Chuan Lu (cul)
 
