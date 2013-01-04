@@ -21,6 +21,7 @@ Pluralised by default, this can be overridden.
 The model's attributes are implicitly derived from the database schema.
 
 ActiveRecord uses the following type mapping (db -> Ruby):
+
 * int -> FixNum
 * decimal -> BigDecimal
 * date -> Date
@@ -122,7 +123,7 @@ ActiveRecord.where("param = :var", var: var)
 ActiveRecord.where(params[:user]) # Maps to SQL.
 ```
 
-Be careful about exposing the database to views. See http://rubyonrails.orb/security.html.
+Be careful about exposing the database to views. See the [Ruby on Rails Security Page](http://rubyonrails.orb/security.html).
 
 ```ruby
 ActiveRecord.where("thing like ?", thing + "%") # Wildcards

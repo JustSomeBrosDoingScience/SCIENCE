@@ -16,6 +16,7 @@ Java EE is a steep learning curve, whilst Rails provides a fairly simple way of 
 internet-based applications.
 
 Rails is CRUD-style:
+
 * Create
 * Read
 * Update
@@ -53,6 +54,7 @@ TODO Another image here.
 
 Rails Applications
 ------------------
+
 * `apps/` Contains the MVC generated code.
 * `config/` Configuration files for things like databases and routes.
 * `db/` Database descriptors. Includes migration files (allows the database to be changed without 
@@ -87,6 +89,7 @@ used in the rails application. All other controllers should extend this.
 Rails Database Management
 -------------------------
 Rails has three different databases:
+
 * Development
 * Production
 * Test
@@ -152,6 +155,7 @@ typically the HTTP Request and Response codes.
 
 Required Versions
 -----------------
+
 * Ruby 1.9.3+
 * Rails 3.2.8+
 

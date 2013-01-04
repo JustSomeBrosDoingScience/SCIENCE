@@ -7,6 +7,7 @@ Course Aims
 -----------
 
 The course will teach about the two main kinds of web-based applications:
+
 * Customer to Business (C2B)
 * Business to Business (B2B). These applications tend to use REST.
 
