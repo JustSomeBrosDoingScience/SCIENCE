@@ -64,7 +64,7 @@ The least pure is $p_+ = 0$
 
 More generally:
 
-$Entropy(S) = \sum_i(-p_i log_2(p_i)$
+$Entropy(S) = \sum_i(-p_i log_2(p_i))$
 
 
 Information Gain
@@ -73,3 +73,58 @@ Information Gain
 $Gain(S,A)$ is the expected reduction of Entropy due to sorting on $A$.
 
 $Gain(S,A) = Entropy(S) - \sum_{u \in Values(A)}\frac{|S_u|}{|S|}Entropy(S)$
+
+
+ID3
+---
+
+```
+create root node
+if all labelled same return single node with an attribute
+	A = best att for S
+	root = A
+```
+
+
+Overfitting
+-----------
+
+$error_{train}(h) < error_{train}(h')$
+
+$error_D(h) > error_D(h')$
+
+Stop growing tree when split is not statistically significant.
+
+Post-prune overfitting.
+
+"Post" tree: $min(size(tree)+size(misclassifier(train)))$ (where min is the minimal description length [whatever the fuck that is])
+
+
+Continuous Attributes
+---------------------
+
+Choose cut-off values (like in fuzzy?)
+
+
+Attributes with many values
+---------------------------
+
+Use Gain Ratio:
+
+$GainRatio(S,A) = \frac{Gain(A,S)}{SplitInfo(S,A)}$
+
+
+Attributes with costs
+---------------------
+
+$\frac{Gain^2(S,A)}{Cost(A)}$
+
+$\frac{2^{Gain(S,A)} - 1}{Cost(A) + 1}$
+
+
+Attributes with missing values
+------------------------------
+
+Assign the most common, classify new examples in a similar fashion.
+
+
