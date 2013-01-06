@@ -45,3 +45,62 @@ $E_D((y^* - f(x^*))^2)$
 Expected prediction error $=$ Variance $+$ Bias $+$ Noise
 
 
+###Formal Definitions
+
+$Variance = E_{x,D}((h(x) - \bar{h}(x))^2)$
+
+$Bias = E_X((\bar{h}(x) - f(x))^2)$
+
+$Noise = E{\epsilon, x}((y-f(x))^2) = E(\epsilon^2) = \sigma^2$
+
+
+Hypothesis Space
+----------------
+
+Decreasing bias increases the hypothesis space (and therefore variance)
+
+Increasing bias decreases variance.
+
+You should match modle complexity to data resouces.
+
+Decision trees have a high variance in general due to thei hueristic nature.
+
+**Note:** Bias is not Inductive Bias. They are, however, linked.
+
+
+Ensemble Models
+---------------
+
+Ensemble models involves combining the preditions of several models to improve overall performance.
+
+### Intuitions
+
+Combining diverse, inderpendant opinions.
+
+Protective mechanism.
+
+Majority vote.
+
+### Boosting
+
+Grow models sequentially, make misclassified examples important.
+
+Decreases bias mainly.
+
+### Bagging
+
+Use different samples.
+
+Decreases variance mainly.
+
+
+Bagging - Bootstrap Aggrigation
+-------------------------------
+
+More robust to noise.
+
+
+Random Forest
+-------------
+
+Applying Bagging to the decision tree and attributes.
