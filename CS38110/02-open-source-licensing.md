@@ -26,6 +26,38 @@ Concerns raised about the limitations raised by the QPL, a lot of Qt was cross-l
 * Governed by the laws of Norway.
 
 
+Artistic License
+----------------
+
+Intention to allow the original author to maintain "artistic" control over the licensed software. The Perl License is the same, with an added paragraph which provides an option for commercial distribution.
+
+Rather vague and confusing. Fairly specific to Perl rather than being a general license like BSD or MIT.
+
+* Original authors have control over the project whilst encouraging contributors within the project, and innovation outside.
+* "Package" over "software", etc.
+* "Standard Version" -> Unmodified version.
+* Definitions of freely available.
+* Distribution of source code of the standard version, as long as the license is distributed along with it.
+* Permits users to update packages to include part of the standard version.
+* Modifications from the public domain (vague)
+* Modification of standard version with a changelog, given you do one of the following:
+    * Public domain your modifications (make them freely available).
+    * Use the modifications internally.
+    * Technical modifications that will likely limit the compatibility of the modified code with the standard version.
+    * Make a deal with the original author.
+* Distribute, given you do one of the following:
+    * Distribute the standard version with details of where to find the source.
+    * Distribute with machine-readable version of the source.
+    * Distribute any non-standard executables, clearly documenting them.
+    * Make a deal with the original author.
+* May charge a reasonable copying fee 
+* Inputs/Outputs fall under the restrictions of the license
+* Usage does not fall under the restrictions of the license
+* No use of name without permission.
+* Embedded with no attempt to provide a direct interface to the package can be distributed commercially.
+* Typically liability disclaimer.
+
+
 Proprietary Licenses
 --------------------
 
