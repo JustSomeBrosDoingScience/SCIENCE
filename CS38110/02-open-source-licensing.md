@@ -1,6 +1,31 @@
 Free and Open Source Licensing
 ==============================
 
+Q Public License (QPL)
+----------------------
+
+Designed for Qt.
+
+Concerns raised about the limitations raised by the QPL, a lot of Qt was cross-licensed under the GPL instead.
+
+* Permits distribution of modifications to covered software in the form of patches under less restrictive terms than modifications to the source code.
+* Viral (all programs "Based on the software").
+* Any software which relies on, or links to anything under the QPL must be governed by it's terms.
+* Distribute unmodified versions of the software.
+* May distribute modifications in the forms of patches only (separate to the original).
+    * This has benefits to the original author and drawbacks to users and contributors.
+    * Keeps integrity of original authors sound.
+* Modifications must not alter or affect the copyright notices
+* Must permit the original author a royalty-free license to the patch.
+* Permission to distribute binary copies with license intact and access to source code.
+* Can make modifications under another license, so long as they are also available under the QPL.
+* May combine with any other software, including libraries.
+* Restrictions on distribution of QPL'd software as part of linked software. While linked software does not need to be under the QPL, these restrictions require both the source code for the linked software to be made available and under a license that permits distribution and modification without fee.
+* No provision for distribution as part of a larger work.
+* Limitation of liability.
+* Governed by the laws of Norway.
+
+
 Proprietary Licenses
 --------------------
 
@@ -31,8 +56,8 @@ Can do things like license access to the source code, but disallow re-distributi
 Proprietary Licenses are typically assume asymmetric bargaining power - the buyer is essential left with a take-it-or-leave-it position. Sometimes, more powerful negotiating positions can get extra benefits.
 
 
-Sun Community Source License
-----------------------------
+Sun Community Source License (SCSL)
+-----------------------------------
 
 A special type of license which are similar to open source licenses, but which do not conform to the Open Source definitions. These licenses tend to have extra clauses which offer some protection to the licensor (in this case Sun/Oracle) but are still designed to benefit from a bazaar-style development model. In the case of the SCSL users are free to modify the source code, but cannot distribute without compliance compatibility provided by the licensor. This does limit the open source model severely, but is designed to protect the cross-compatibility of Java.
 
