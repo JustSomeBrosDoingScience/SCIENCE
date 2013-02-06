@@ -23,3 +23,30 @@ Ideas are very difficult to formalise.
 This module focuses on a formal definition for a system specification.
 
 Compilers can be completely automated from requirements.
+
+
+Specification
+-------------
+
+A specification should be:
+
+* Concise
+* Complete
+* Consistent
+
+It is important to maintain consistency between stages of specification, traditional methods of software development make this difficult.
+
+Mathematical methods of specification can help with this.
+
+Advantages of Formal Specification
+----------------------------------
+
+* Makes you think
+* Unambiguous language
+* May be autonomous
+* Automated test data
+* Can be proved to be correct rather than tested
+* Errors detected earlier
+* Adapt to changing requirements easier
+
+
