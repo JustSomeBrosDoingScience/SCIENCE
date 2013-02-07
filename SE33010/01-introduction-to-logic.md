@@ -90,8 +90,8 @@ Example of a boolean type.
 
 ```
 INITIAL
-
 		boolean
+
 SORT
 		bool
 
@@ -114,7 +114,8 @@ EQUATIONS
 		A or false	= A
 		A and B		= not(not(A) or not(b))
 		A impl B	= not(A) or B
-		A equiv B	= 
+		A equiv B	= (A impl B) and (B impl A)
+END
 ```
 
 `INITIAL` means that there are no values or relations other than those which can be deduced from the given ones, for example one can deduce that `A and B = B and A`, buy not `true = false`.
@@ -158,6 +159,14 @@ EQUATIONS
 		E is-member-of undef	= false
 		E is-member-of empty	= false
 		E is-member-of (A.B)	= (E eq A) or (E is-member-of B)
+		(A.B) eq (C.D)		= (A eq C) and (B eq D)
+		empty eq empty		= true
+		(A.B) eq empty		= false
+		A eq B			= B eq A
+		at-end(empty)		= true
+		at-end(undef)		= false
+		at-end(A.B)		= false
+END
 ```
 
 

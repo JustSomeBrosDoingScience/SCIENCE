@@ -32,4 +32,6 @@ Start with a (very) abstract specification and build an implementation from it.
 
 Uses *data reification* and *program decomposition*, both of which are accompanied by *proof obligations*
 
-Specification defines Abstract data types...
+Specification defines Abstract data types and are reifoicated to data structures in the implementation.
+
+Specification also defines operations are decomposed to algorithms.
