@@ -76,3 +76,115 @@ Humanitarian use where there is a great risk (search and rescue in danger areas)
 Bottom-up approach tends towards better performance (implement the simplest organism first, then work upwards. Natural selection, different levels of behaviour which can communicate).
 
 
+Environmental Differences
+-------------------------
+
+* Computers
+    * Input symbols are static
+    * Operation given consistent results
+    * Environment is fixed and repeatable
+    * System only receives intended inputs
+    * Perfect performance assumed
+* Robots
+    * Noise
+    * Actions may have different responses
+    * Objects may move independently
+    * Influences from external agents can interfere
+    * Operation environment is unreliable, dynamic and incomplete.
+
+
+
+Intelligent Robotics
+--------------------
+
+> *"An intelligent robot is a machine able to extract information from its environment and use knowledge about its world to move safely in a meaningful and purposive manner."* - Arkin
+
+> *"An intelligent robot is a machine creture which can function autonomously."* - Murphy
+
+Usually specific to function.
+
+Popular for industrial usage, especially production lines.
+
+Revolution in computing power has allowed for a rise of more sci-fi robots. Now quite common military.
+
+###3 'D's of Robots
+
+* Dirty
+* Dull
+* Dangerous
+
+
+Levels of autonomy
+------------------
+
+###Remote Control
+Completely controlled via a remote by a human.
+
+Robot Wars (*A: Myra is awesome*).
+
+Not intelligent at all.
+
+###Teleoperation
+Human operator controls robot from a distance, who usually cannot physically see the robot.
+
+Sensors acquire information about the environment and is displayed for the operator to see. This can allow for addition sensory capacity (i.e. high pitched noises, etc.) so long as it can be displayed in a meaningful way.
+
+Requires a communication link, there's a number of websites which offer this kind of this.
+
+Requires $\ge$ one operator.
+
+This is most useful when tasks are unstructured and aren't repetitive.
+
+Situations where this is likely: a dynamic environment, dexterous task, need for advanced perception.
+
+Important to have a good form of displaying the data meaningfully.
+
+Needs trained operators.
+
+###Telesense
+Introduces Virtual Reality (VR) to teleoperation
+
+Attempts to remove some of the cognitive fatigue and simulation sickness from the operator.
+
+Operator has complete sensory feedback.
+
+This is very expensive and requires a high bandwidth rate. 
+
+###Semi-autonomous
+Able to perform tasks autonomously. Good for planetary missions.
+
+Good for unstable communication.
+
+Continuous assistance; delegate tasks to the robot whilst observing it. Can use teleoperation for delegate tasks. Still needs the high bandwidth.
+
+Control trading; human initiates the action for the robot to complete autonomously. Assumes robot is capable of autonomously accomplishing tasks robustly to unexpected situations.
+
+###Autonomous
+Able to perform tasks autonomously without any human input.
+
+"Weak Autonomy" - robots which carry on-board controllers and power supplied.
+
+"Strong Autonomy" - Require the power of self-government:
+
+* Ability to move in its environment to perform a number of tasks
+* Adapt to changes in environment
+* Determine its course of action by its own reasoning processes
+* Build internal representation of the world to plan and learn from experience and change its behaviour accordingly
+
+(*A: Reinforcement learning is probably one of the better techniques for this?*)
+
+
+Achieving Autonomy
+------------------
+
+Artificial Intelligence Approach
+
+* Knowledge Representation
+* Natural Language Processing (NLP)
+* Learning
+* Planning and Problem Solving
+* Inference
+* Search
+* Vision (and other sensor readings)
+
+Robotics feeds into AI and vice versa.
