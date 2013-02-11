@@ -109,3 +109,96 @@ Support and other Issues
 ------------------------
 
 Large percentage of income (10-25% of turnover).
+
+
+Cash Flow
+---------
+
+Gets confused with profits.
+
+Bringing in a concept called *credit*. Business to business (B2B) relationships.
+
+Most companies allow you credit. Upon invoice normally you have 30 days in credit.
+
+Credit orders and invoices are the norm for B2B transactions.
+
+
+Payment Cycle
+-------------
+
+Send invoice at the end of the Month
+
+Receive money 1-2 months later
+
+Therefore up to 3 months salaries, rents, bills to pay, etc.
+
+Problem is you need cash as a start-up.
+
+Big companies are generally the worst for paying in time.
+
+> *"Oh it's a long walk here."* - Rhys going from one side of Hugh Owen C4 to the other.
+
+Cash in and cash out are not the same as sales, costs and profits.
+
+
+Types of Software House
+-----------------------
+
+Body Shopping Services - need a few months working capital.
+
+Product Developer - Needs perhaps a year or more development funds.
+
+Bespoke Software - Could use advanced from customer to help cash flow.
+
+
+Getting the Money
+-----------------
+
+(*A: tl;dr "Give us your fucking money."*).
+
+Business plan:
+
+* Description of Business
+* Technical feasibility
+* Founders expertise
+* Market size
+* Competition
+* Financial prediction
+
+More later.
+
+
+Sources of Funds
+----------------
+
+* Loans
+* Equity
+* Grants
+
+
+###Grants
+
+Money *given* to a company. May have restrictions on various things.
+
+
+###Loans
+
+Money *lent* to a company. Interest payable on it, personal guarantees on the loan.
+
+Secured loan has some assurance that you have enough collateral. Unsecured they don't.
+
+Personal loans from friends.
+
+Soft leans, short/long term, overdraft, etc.
+
+
+###Equity
+
+Money *paid* to the company for a *share* of that company.
+
+Risk versus reward.
+
+Dragons Den. I'm out.
+
+
+
