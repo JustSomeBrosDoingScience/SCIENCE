@@ -144,7 +144,9 @@ Examples of valid wffs:
 ```
 A,(A),¬A ∧ B
 ```
-Precedence defined by the order. Note this is strict as no two operators have the same precedence. This allows us to get rid of brackets.
+
+Precedence defined by the order. Note this is strict as no two operators have the same precedence.
+
 
 ####Implication
 
@@ -155,10 +157,12 @@ Consider:
 $$ i = 2 \Rightarrow i^2 = 4 $$
 
 When $i = 2$, both sides will be true. Resolves to true.
+
 When $i = -2$ the left hand side will evaluate to false, the other to true. Resolves to true.
+
 When $i = 1$ both sides are false, which resolves the implication to true.
 
-For the final entry, consider $i=1 \Rightarrow i^2 = 4 $$
+For the final entry, consider $i=1 \Rightarrow i^2 = 4$
 
 When $i = 1$ the left-hand side is true, the other false. Resolves to false.
 
@@ -166,3 +170,119 @@ When $i = 1$ the left-hand side is true, the other false. Resolves to false.
 $$ A \Rightarrow B \equiv \neg A \cup B $$
 
 
+###Semantic Reasoning
+
+Semantic reasoning leads to the idea of validity denoted by the double turnstile symbol $\vDash$
+
+Let $P$ be a finite list of propositions - the *premises*. 
+
+If, whenever all propositions of $P$ are true then the proposition $W$ is true, we say that $P$ provides the validity of $W$, written $P \vDash W$
+
+If $P$ is empty then $\vDash W$ means that $W$ is always true and we say that $W$ is a tautology.
+
+Propositions $P$ and $Q$ are logically equicalent if $\vDash P \Leftarrow\Rightarrow Q$ (sometimes written $P \equiv Q$)
+
+
+###Syntactic Reasoning/Formal Proof
+
+In formal logic we are concerned with the syntatic derivations or **formal proofs**, rather than the meanings.
+
+That is:
+
+* We have a set of **axioms** - wffs which can be written without reference to any other wff in the language.
+* A set of **inference rules** - rule which describe how wffs can be produces as *immediate consequences* of other wffs in the language.
+
+A **derivation** or **formal proof** of the wff $W$ form a given set of wffs $P$ (the *premises*) is a finite sequence of wffs, each of which is either:
+
+1. An axiom
+2. A premise
+3. An immediate consequence of one or more preceding wffs (as determined by the inference rules)
+
+If there is such a derivation of $W$ from $P$ we write $P \vdash W$.
+
+$\vsash$ is the single turnstyle, or syntactic turnstyle.
+
+Applying formal proofs to propositional logic gives us the **propositional calculus**.
+
+There are many choices of deductive system for the propositional calculus, the system outlined below is called a *Gentzen Natural Deductive System*.
+
+####Some Inference Rules
+
+$$\frac{A,B}{A \cap B} \text{ and } \frac{A,B}{B \cap A}\text{  }\cap\text{-Introduction}$$
+
+$$\frac{A \cap B}{A} \text{ and } \frac{A \cap B}{B} \text{  }\cap\text{-Elimination}$$
+
+$$\frac{A}{A \cup B} \text{ and } \frac{A}{B \cup A} \text{  }\cup\text{-Introduction}$$
+
+etc.
+
+####An Example
+
+Show that $P \cap Q \vdash P \cup Q$
+
+Proof:
+
+
+-  ----------  ------------------------
+1  $P \cap Q$  premise
+2  $P$         1 by $\cap$-Elimination
+3  $P \cup Q$  2 by $\cup$-Introduction
+-  ----------  ------------------------
+
+Q.E.D.
+
+
+####Another example
+
+Show that $P,P \Rightarrow Q, Q\Leftarrow\Rightarrow R \vdash Q \cap R$
+
+
+-  ---------------------------  -----------------------------------------
+1  $P$                          premise
+2  $P \Rightarrow Q$            premise
+3  $Q \Leftarrow\Rightarrow R$  premise
+4  $Q$                          1,2 by $\Rightarrow$-Elimination
+5  $Q \Rightarrow R$            3 by $\Leftarrow\Rightarrow$-Elminiation
+6  $R$                          4,5 by $\Rightarrow$-Elimination
+7  $Q \cap R$                   4,6 by $\cap$-Introduction
+-  ---------------------------  -----------------------------------------
+
+Q.E.D.
+
+
+Consistency and Completeness
+----------------------------
+
+The propositional calculus is boy **consistent** and **complete**.
+
+**Consistency** If $P$ is any finite set of propositions and $W$ is a proposition such that $P \vdash W$ then $P \vDash W$
+
+That is, anything which can be formally proved can be show... (*A: I give up see the slides*).
+
+
+Application
+-----------
+
+Propositional logic can be applied to model the behaviour of digital electronic circuits. Used to reason about the behaviour of circuits, the decidability theorem implies that finite algorithms can be used to create the circuit.
+
+
+Predicate Logic
+---------------
+
+We want to use logic to reason about the correctness of computer programs. To do this we need a language which is more powerful than the propositional logic. We introduce truth valued functions: *predicates*:
+
+$$positive(counter)$$
+
+Can have more than one argument:
+
+$$bigger\_than(counter,total)$$
+
+More conveniently, we write this in *infix* form as:
+
+$$counter \lt total$$
+
+The alphabet of the predicate is that for propositional logic, extended by lower case letters, the symbols $\forall$ $\exists$., and arbitary strings of letters (upper or lower case).
+
+$\forall x$ is read "for all $x$"
+
+$\exists x$ is read "there exists $x$"
