@@ -122,3 +122,88 @@ Legs must be capable of sustaining part of the robots total weight.
 Problem between static stability and dynamic stability.
 
 1 leg: hoppers. MIT looking at controlling legs.
+
+2 legs: more stable, cat still act like hoppers. One of the most difficult robots to make due to the inherent instability of the robot. Can only be statically stable within limits and have no dynamic stability. Must keep servoing while standing still.
+
+Passive dynamic walkers able to walk down an incline without actuation and without control. Closer to how humans walk than some of the statically stable robots.
+
+Yet to have bipedal robots going faster than humans.
+
+
+###Static Walking
+
+Projection of COG on the round always inside the foot support area.
+
+Always in a stable equilibrium.
+
+Not biologically plausible
+
+Control first, morphology second.
+
+Low energy efficiency
+
+Better manoeuvrability (stair climbing)
+
+
+###Dynamic Walking
+
+Projection of COG on the ground can be outside the foot support area.
+
+Mostly not in a stable equilibrium.
+
+Biologically plausible (and inspired)
+
+Morphology and its dynamics are more important than control.
+
+Energy efficient
+
+Weak manoeuvrability, no steps.
+
+
+
+---
+
+4 legs: statically stable while standing, but not when walking. Gait analysis of animals can be used to provide walking motion. Technically challenging.
+
+$\gt 4$ legs: More statically stable. Reduces control complexity. Various gait patterns, useful for rough terrain.
+
+
+Flying Robot Systems
+--------------------
+
+The obvious problems.
+
+
+Wheeled Walkers
+---------------
+
+Ensemble of walkers and wheels (duh).
+
+Prime example: (Jim's) Mars Rover.
+
+
+Biologically Inspired Robots
+----------------------------
+
+Energy efficiency. Snakes, tuna, snakes, etc.
+
+
+Autonomous Sailing
+------------------
+
+Talk to Mark Neal.
+
+
+Summary
+-------
+
+Energy efficiency is important. Advanced materials needed.
+
+Morphology essential for dynamical stable systems.
+
+The characteristics of a robot are governed by choices:
+
+* Stability
+* Manoeuvrability
+* Controllability
+* Depends on the application and environment
