@@ -281,8 +281,120 @@ More conveniently, we write this in *infix* form as:
 
 $$counter \lt total$$
 
-The alphabet of the predicate is that for propositional logic, extended by lower case letters, the symbols $\forall$ $\exists$., and arbitary strings of letters (upper or lower case).
+The alphabet of the predicate is that for propositional logic, extended by lower case letters, the symbols $\forall$ $\exists$ $\bullet$, and arbitary strings of letters (upper or lower case).
 
 $\forall x$ is read "for all $x$"
 
 $\exists x$ is read "there exists $x$"
+
+
+VDM
+===
+
+###Built in Sets
+
+**B** = booleans
+
+**N** = Unsigned integers starting at 0
+
+$\text{N}_1$ = Unsigned integers starting at 1
+
+**Z** = Signed integers
+
+###Some example notation
+
+$$ \_ + \_ : Z \times Z \rightarrow Z $$
+
+$$ \mathunderscore mod \_ : N \times N_1 \rightarrow B $$
+
+
+Proof Obligation for Functions
+------------------------------
+
+Suppose we have an implicit specification:
+
+$$f(p:T_p)r:T_r$$
+
+`pre pre-f(p)`
+
+`post post-f(p,r)`
+
+$$ f:T_P \rightarrow T_r$$
+
+
+
+Suppose we have to define multiplication:
+
+$$ multp(i,j)  $$
+
+```
+    if   i = 0
+    then 0
+    else if   is-even(i)
+         then 2 * multp(i/2, j)
+         else j + multp(i-1, j)
+```
+
+Then the proof obligation becomes:
+
+$$ \forall i,j \in \text{N} \bullet multp(i,j) \in \text{N} \cap multp(i,j) = i \times j $$
+
+
+Partial Functions
+-----------------
+
+Consider:
+
+$$ subp(i:\text{N}, j:\text{N})r:\text{N} $$
+
+```
+pre j <= i
+post r + j = i
+```
+
+An explicit definition of $subp$ will generate the following proof obligation:
+
+$$ \forall i,j:\text{N} \bullet \text{pre} - subp (i,j) \Rightarrow subp(i,j) \in \text{N} \cap \text{post} - subp(i,j) $$
+
+i.e.
+
+$$ \forall i,j:\text{N} \bullet j \le i \Rightarrow subp(i,j) \in \text{N} \cap subp(i,j) + i = j$$
+
+Can't complete this evaluation; when $j$ is bigger than $i$ this equation is undefined.
+
+However, using **Logic of Partial Functions** (LPF):
+
+1. If $j \le i$ the implication becomes $\text{T} \Rightarrow \text{T} \cap \text{T}$ which evaluates to **T**.
+2. If $j \gt i$ the implication becomes $\text{F} \Rightarrow \text{* } \cap \text{ *}$ which evaluates to **T**.
+
+The "Law of the Excluded Middle" ($\vdash P \cup \neg P$) clearly does not hold in LPF.
+
+This is, in fact, a virtue with partially defined functions, for example, there is no reason for:
+
+$$ \frac{2}{0} = 1 \cup \frac{2}{0} \ne 1 $$
+
+However, we do get useful results like:
+
+$$\forall n \bullet n \in \text{Z} \Rightarrow n = 0 \cup \frac{n}{n} = 1 $$
+
+Another rule which doesn't hold in LPF is $\vdash P \Rightarrow P$.
+
+
+Domain of Interest
+------------------
+
+The domain of interest can now be defined rigorously by specifigying over which set the bound variables range.
+
+For example
+
+$$ \exists x \bullet x \gt 4$$
+
+Can be more precisely specifed by
+
+$$ \exists x \bullet x \in \text{N} \cap x \gt 4 $$
+
+The expression still has meaning when $x \gt 4$ is undefined.
+
+So, in future, we will always quantify over some set and we introduce an avvreviated notation:
+
+$$ \forall x \in S \bullet P(x) \text{for} \forall x \bullet \in S \Rightarrow P(x) $$
