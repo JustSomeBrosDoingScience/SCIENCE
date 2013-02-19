@@ -398,3 +398,190 @@ The expression still has meaning when $x \gt 4$ is undefined.
 So, in future, we will always quantify over some set and we introduce an avvreviated notation:
 
 $$ \forall x \in S \bullet P(x) \text{for} \forall x \bullet \in S \Rightarrow P(x) $$
+
+
+States and Operations
+---------------------
+
+Functions may not have side effects, instead we have **states** and **operations** on the states.
+
+Example:
+
+```
+state Register as
+    reg: N
+end
+
+LOAD(i:n)
+ext wr reg:N
+post reg = i
+```
+
+The exterior clause (`ext`) specifies which parts of the state can be accessed by the operation.
+
+* `rd` means read access
+* `wr` means write access (implies read access)
+
+Operation labels capitalised by convention.
+
+Hooked variables denote the value of that variable prior to the execution of the operation.
+
+Returning works like:
+
+```
+SHOW()r:N
+ext rd reg:N
+post r = reg
+```
+
+Can also have `pre-OP` and `post-OP`.
+
+
+Data Types
+----------
+
+Predefined sets: **B**, **N**, **N**1, **Z**, **Q**, **R**.
+
+For a set *X*, *X-set* is the set of all finite subsets of *X*.
+
+e.g.: **B**-set = {{},{true},{false},{true,false}}
+
+A useful abbreviation for sets of integers is:
+
+$$ \{i,...,j\}=\{ k \in Z    $$
+
+VDM-SL admits a lot of useful set operations.
+
+Type of `To Be Defined` is allowed and just means the type is defined somewhere else.
+
+**Just a note:** no concurrency in VDM so you don't have to worry about locking.
+
+###Composite Type
+
+The general form of a composite type definition is:
+
+```
+Name ::
+    s1 : T1
+    s2 : T2
+    .
+    .
+    .
+    sn : Tn
+```
+
+This type has associated with it the constructor:
+
+```
+mk-Nam : T1 x T2 x ... x Tn -> Name
+```
+
+And selector functions:
+
+```
+s1 : Name -> T1
+s2 : Name -> T2
+      .
+      .
+      .
+sn : Name -> Tn
+```
+
+Example:
+
+```
+Date ::
+    day : {1,...,366}
+    year : {1901,...,2099}
+```
+
+Automatically gives us these functions:
+
+```
+mk-Date({1,...,366} x {1901,...,2099} -> Date
+day : Date -> {1,.366}
+year : Date -> {1901, 2099}
+```
+
+For example: `mk-date{45,2003}`
+
+There is the problem of leap years in this example. So we might want a function `valid-Date : Date -> B` to determine whether a date is actually valid.
+
+```
+valid-Date(dt) ? is-leapyear(year(dt)) V day(dt) <= 365
+
+is-leapyear(i) ? i mod 4 = 0
+```
+
+Alternatively:
+
+```
+valid-Date(dt) ?
+    let mk-Date(d,y) = dt
+    in is-leapyear(y) V d <= 365
+```
+
+**Note:** Because of the restricted year range our definition of leap year works.
+
+Data type **invariants** can be added to composite types using the construction:
+
+```
+Date ::
+    day : {1,...,366}
+    year : {1901,...,2099}
+where
+inv-Date(mk-Date(d,y)) ? is-leapyear(y) V d <= 365
+```
+
+Now only valid dates will be allowed on the constructor.
+
+####Optional Fields
+
+Optional fields are allowed in composite types, denoted by `[...]`, and an omitted field is denoted by `nil`:
+
+```
+Record ::
+    day : {1,...,366}
+    year : {1901,...,2099}
+    valid : [ERROR]
+```
+
+Useful for recursive data types.
+
+###Recursive Data Definitions
+
+```
+List = [Listelt]
+Listelt ::
+    hd : N
+    tl : List
+
+nil in List
+mk-Listelt(3,nil) in List
+mk-Listelt(1,mk-Listelt(2,mk-Listelt(3,nil))) in List
+
+lsum : List -> N
+lsum(l) ?
+    cases l:
+        nil -> 0
+        mk-Listelt(hd,tl) -> hd + lsum(tl)
+    end
+```
+
+####Binary Search Tree Example
+
+```
+Tree = [Node]
+Node ::
+    left : Tree
+    value : N
+    right : Tree
+where
+inv-Node(mk-Node(left,value,right)) ?
+    (forall(lv) in values(left) assert lv < value) and (forall(rv) in values(right) assert value < rv)
+values : Tree -> N-set
+values(t) ?
+    cases t of
+        nil -> {}
+        mk-Node(left,value,right) -> values(left) union {value} union values(right)
+```
