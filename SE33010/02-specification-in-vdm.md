@@ -56,7 +56,7 @@ Example:
 
 $$ \text{max}(i:Z,j:Z)r:Z $$
 $$ \text{pre } true $$
-$$ \text{post } (r=i \cup r=j) \cap i \le r \cup j \le r $$
+$$ \text{post } (r=i \lor r=j) \land i \le r \lor j \le r $$
 
 Can refer to pre- or post-condition out of context, we can use the notation: `pre-max` and `post-max`.
 
@@ -122,10 +122,10 @@ $$ A, B, ..., Z $$
 Normal brackets $($ and $)$.
 
 * $\neg$ negation (not), unary
-* $\cap$ conjunction (and), binary
-* $\cup$ disjunction (or), binary
+* $\land$ conjunction (and), binary
+* $\lor$ disjunction (or), binary
 * $\Rightarrow$ implication (implies), binary
-* $\Leftarrow\Rightarrow$ equivalence (is equivalent to), binary
+* $\Leftrightarrow$ equivalence (is equivalent to), binary
 
 The syntax is simply:
 
@@ -167,20 +167,20 @@ For the final entry, consider $i=1 \Rightarrow i^2 = 4$
 When $i = 1$ the left-hand side is true, the other false. Resolves to false.
 
 
-$$ A \Rightarrow B \equiv \neg A \cup B $$
+$$ A \Rightarrow B \equiv \neg A \lor B $$
 
 
 ###Semantic Reasoning
 
-Semantic reasoning leads to the idea of validity denoted by the double turnstile symbol $\vDash$
+Semantic reasoning leads to the idea of validity denoted by the double turnstile symbol $\models$
 
 Let $P$ be a finite list of propositions - the *premises*. 
 
-If, whenever all propositions of $P$ are true then the proposition $W$ is true, we say that $P$ provides the validity of $W$, written $P \vDash W$
+If, whenever all propositions of $P$ are true then the proposition $W$ is true, we say that $P$ provides the validity of $W$, written $P \models W$
 
-If $P$ is empty then $\vDash W$ means that $W$ is always true and we say that $W$ is a tautology.
+If $P$ is empty then $\models W$ means that $W$ is always true and we say that $W$ is a tautology.
 
-Propositions $P$ and $Q$ are logically equicalent if $\vDash P \Leftarrow\Rightarrow Q$ (sometimes written $P \equiv Q$)
+Propositions $P$ and $Q$ are logically equicalent if $\models P \Leftrightarrow Q$ (sometimes written $P \equiv Q$)
 
 
 ###Syntactic Reasoning/Formal Proof
@@ -200,7 +200,7 @@ A **derivation** or **formal proof** of the wff $W$ form a given set of wffs $P$
 
 If there is such a derivation of $W$ from $P$ we write $P \vdash W$.
 
-$\vsash$ is the single turnstyle, or syntactic turnstyle.
+$\vdash$ is the single turnstyle, or syntactic turnstyle.
 
 Applying formal proofs to propositional logic gives us the **propositional calculus**.
 
@@ -208,25 +208,25 @@ There are many choices of deductive system for the propositional calculus, the s
 
 ####Some Inference Rules
 
-$$\frac{A,B}{A \cap B} \text{ and } \frac{A,B}{B \cap A}\text{  }\cap\text{-Introduction}$$
+$$\frac{A,B}{A \land B} \text{ and } \frac{A,B}{B \land A}\text{  }\land\text{-Introduction}$$
 
-$$\frac{A \cap B}{A} \text{ and } \frac{A \cap B}{B} \text{  }\cap\text{-Elimination}$$
+$$\frac{A \land B}{A} \text{ and } \frac{A \land B}{B} \text{  }\land\text{-Elimination}$$
 
-$$\frac{A}{A \cup B} \text{ and } \frac{A}{B \cup A} \text{  }\cup\text{-Introduction}$$
+$$\frac{A}{A \lor B} \text{ and } \frac{A}{B \lor A} \text{  }\lor\text{-Introduction}$$
 
 etc.
 
 ####An Example
 
-Show that $P \cap Q \vdash P \cup Q$
+Show that $P \land Q \vdash P \lor Q$
 
 Proof:
 
 
 -  ----------  ------------------------
-1  $P \cap Q$  premise
-2  $P$         1 by $\cap$-Elimination
-3  $P \cup Q$  2 by $\cup$-Introduction
+1  $P \land Q$  premise
+2  $P$         1 by $\land$-Elimination
+3  $P \lor Q$  2 by $\lor$-Introduction
 -  ----------  ------------------------
 
 Q.E.D.
@@ -234,17 +234,17 @@ Q.E.D.
 
 ####Another example
 
-Show that $P,P \Rightarrow Q, Q\Leftarrow\Rightarrow R \vdash Q \cap R$
+Show that $P,P \Rightarrow Q, Q\Leftrightarrow R \vdash Q \land R$
 
 
 -  ---------------------------  -----------------------------------------
 1  $P$                          premise
 2  $P \Rightarrow Q$            premise
-3  $Q \Leftarrow\Rightarrow R$  premise
+3  $Q \Leftrightarrow R$  premise
 4  $Q$                          1,2 by $\Rightarrow$-Elimination
-5  $Q \Rightarrow R$            3 by $\Leftarrow\Rightarrow$-Elminiation
+5  $Q \Rightarrow R$            3 by $\Leftrightarrow$-Elminiation
 6  $R$                          4,5 by $\Rightarrow$-Elimination
-7  $Q \cap R$                   4,6 by $\cap$-Introduction
+7  $Q \land R$                   4,6 by $\land$-Introduction
 -  ---------------------------  -----------------------------------------
 
 Q.E.D.
@@ -255,7 +255,7 @@ Consistency and Completeness
 
 The propositional calculus is boy **consistent** and **complete**.
 
-**Consistency** If $P$ is any finite set of propositions and $W$ is a proposition such that $P \vdash W$ then $P \vDash W$
+**Consistency** If $P$ is any finite set of propositions and $W$ is a proposition such that $P \vdash W$ then $P \models W$
 
 That is, anything which can be formally proved can be show... (*A: I give up see the slides*).
 
@@ -305,7 +305,7 @@ $\text{N}_1$ = Unsigned integers starting at 1
 
 $$ \_ + \_ : Z \times Z \rightarrow Z $$
 
-$$ \mathunderscore mod \_ : N \times N_1 \rightarrow B $$
+$$ \_ mod \_ : N \times N_1 \rightarrow B $$
 
 
 Proof Obligation for Functions
@@ -337,7 +337,7 @@ $$ multp(i,j)  $$
 
 Then the proof obligation becomes:
 
-$$ \forall i,j \in \text{N} \bullet multp(i,j) \in \text{N} \cap multp(i,j) = i \times j $$
+$$ \forall i,j \in \text{N} \bullet multp(i,j) \in \text{N} \land multp(i,j) = i \times j $$
 
 
 Partial Functions
@@ -354,28 +354,28 @@ post r + j = i
 
 An explicit definition of $subp$ will generate the following proof obligation:
 
-$$ \forall i,j:\text{N} \bullet \text{pre} - subp (i,j) \Rightarrow subp(i,j) \in \text{N} \cap \text{post} - subp(i,j) $$
+$$ \forall i,j:\text{N} \bullet \text{pre} - subp (i,j) \Rightarrow subp(i,j) \in \text{N} \land \text{post} - subp(i,j) $$
 
 i.e.
 
-$$ \forall i,j:\text{N} \bullet j \le i \Rightarrow subp(i,j) \in \text{N} \cap subp(i,j) + i = j$$
+$$ \forall i,j:\text{N} \bullet j \le i \Rightarrow subp(i,j) \in \text{N} \land subp(i,j) + i = j$$
 
 Can't complete this evaluation; when $j$ is bigger than $i$ this equation is undefined.
 
 However, using **Logic of Partial Functions** (LPF):
 
-1. If $j \le i$ the implication becomes $\text{T} \Rightarrow \text{T} \cap \text{T}$ which evaluates to **T**.
-2. If $j \gt i$ the implication becomes $\text{F} \Rightarrow \text{* } \cap \text{ *}$ which evaluates to **T**.
+1. If $j \le i$ the implication becomes $\text{T} \Rightarrow \text{T} \land \text{T}$ which evaluates to **T**.
+2. If $j \gt i$ the implication becomes $\text{F} \Rightarrow \text{* } \land \text{ *}$ which evaluates to **T**.
 
-The "Law of the Excluded Middle" ($\vdash P \cup \neg P$) clearly does not hold in LPF.
+The "Law of the Excluded Middle" ($\vdash P \lor \neg P$) clearly does not hold in LPF.
 
 This is, in fact, a virtue with partially defined functions, for example, there is no reason for:
 
-$$ \frac{2}{0} = 1 \cup \frac{2}{0} \ne 1 $$
+$$ \frac{2}{0} = 1 \lor \frac{2}{0} \ne 1 $$
 
 However, we do get useful results like:
 
-$$\forall n \bullet n \in \text{Z} \Rightarrow n = 0 \cup \frac{n}{n} = 1 $$
+$$\forall n \bullet n \in \text{Z} \Rightarrow n = 0 \lor \frac{n}{n} = 1 $$
 
 Another rule which doesn't hold in LPF is $\vdash P \Rightarrow P$.
 
@@ -391,7 +391,7 @@ $$ \exists x \bullet x \gt 4$$
 
 Can be more precisely specifed by
 
-$$ \exists x \bullet x \in \text{N} \cap x \gt 4 $$
+$$ \exists x \bullet x \in \text{N} \land x \gt 4 $$
 
 The expression still has meaning when $x \gt 4$ is undefined.
 
@@ -422,7 +422,7 @@ The exterior clause (`ext`) specifies which parts of the state can be accessed b
 * `rd` means read access
 * `wr` means write access (implies read access)
 
-Operation labels capitalised by convention.
+Operation labels landitalised by convention.
 
 Hooked variables denote the value of that variable prior to the execution of the operation.
 
@@ -448,7 +448,7 @@ e.g.: **B**-set = {{},{true},{false},{true,false}}
 
 A useful abbreviation for sets of integers is:
 
-$$ \{i,...,j\}=\{ k \in Z    $$
+$$\{i,...,j\}=\{ k \in Z \ldots$$
 
 VDM-SL admits a lot of useful set operations.
 
@@ -585,3 +585,25 @@ values(t) ?
         nil -> {}
         mk-Node(left,value,right) -> values(left) union {value} union values(right)
 ```
+
+
+Maps
+----
+
+A **map** is similar to a function defined on a finite set, except that the argument:result pairs are given explicitly.
+
+e.g.: $\left\{{a_1 \mapsto r_1, a_2 \mapsto r_2,\ldots ,a_n \mapsto r_n}\right\}$
+
+$$\left\{{x \mapsto f(x)|P(x)}\right\}$$
+
+Denoted by
+
+$$ X \rightarrow^{m} Y $$
+
+###Map Overriding
+
+$$m_1 \dagger m_2$$
+
+$m_2$ overrides elements in $m_1$. If an element in exists in both $m_1$ and $m_2$ then the return from $m_2$ is used, otherwise it's just the union of the two maps.
+
+
