@@ -116,12 +116,10 @@ Straightforward hardware and operating principals are less likely to go wrong.
 
 
 ### Modularity
-
 The ability to remove or add sensors without implications.
 
 
 ### Redundancy
-
 Physical redundancy - having 2+ identical sensors. Remembering the problems of not being able to have two sensors in the exact same place.
 
 Logical redundancy - having 2+ different sensors measuring the same quantity.
@@ -131,29 +129,24 @@ Common Sensors in Robotics
 --------------------------
 
 ### Shaft-encoder
-
 Mounted directly on the motorshaft before the gearbox (higher resolution). Counts the number of ticks.
 
 With two, the phase-shift between encoder signals 1 and 2 indicate direction.
 
 
 ### Accelerometer
-
 Measures acceleration along one axis; one way to do this: linear variable differential transformer (LVDT) measures linear displacement.
 
 
 ### Gyroscope
-
 Measuring rotation change of orientation along one axis. Fundamental to helicopters.
 
 
 ### Inclinometer
-
 Measuring absolute orientation angle about one axis.
 
 
 ### Compass
-
 Measuring absolute orientation using the Earth's magnetic field. Keep away from any electromagnets (wheels, speakers, etc.).
 
 Analogue (low resolution) or digital.
@@ -162,14 +155,12 @@ Frequently applied for self-localisation.
 
 
 ### Global Position System (GPS)
-
 Have become more accurate. Within a meter outdoors (is that enough?).
 
 Outdoors better (obviously).
 
 
 ### Sonar Sensors
-
 Proximity measure (15cm - 5m)
 
 FOX approx. 15 deg.
@@ -183,29 +174,99 @@ Very cheap. Good for a general view of the environment.
 Can be used underwater with a change in frequency.
 
 #### Reflections
-
 Signals seem to take longer to come back as it has reflected.
 
 #### Interferences
-
 A ping from one sensor picked up by another.
 
 
 ### Lasers
-
 Similar principals to sonar but faster and 2D capabilities (indoor 8-32m, outdoor 32-80m).
 
 Scanner is quite large.
 
 
 ### Infra-Red (IR)
-
 Non-linear proximity measure. Below the measure ranges, values indicate larger distances. Strategies needed for close objects.
 
 
 ### Force Sensors
-
 Used to measure the amount of force applied to the sensor.
 
+
+### Cameras
+Digital cameras you get an array of colour model-encoded pixels (3 bytes, 24-bits "true colour"); grey resolution - 1 byte.
+
+CMOS sensor chips measure only brightness, but colour filter for each pixel delivers colour data.
+
+CMOS sensor senses more green as this is more true to the human eye. Format of this is:
+
+-- --
+G  R
+B  G
+-- --
+
+Trade-off between frame-rate and resolution.
+
+Manufacturers focused on resolution while robotisitics would prefer high frame-rate.
+
+Omni-vision via hyperbolic mirror ($2\pi$ vision).
+
+Cameras can be put on an active system - pan and tilt system or pan, tilt and verge system.
+
+####3D cameras
+Distance measue via pixel correspondence between two images from different cameras.
+
+Calibration can be difficult and camera configuration cannot be changed afterwards.
+
+Pixel correspondence difficult for homogeneous regions and in general has high computation costs.
+
+Changing light conditions are difficult to handle.
+
+####3D Laser Scanners
+Provide distance and reflectivity independent of the lighting conditions.
+
+Expensive and unwieldy.
+
+
+The Perception Problem
+----------------------
+Read a value from the sensor, then interpret the data, then perform an action or reaction.
+
+### Reading from Sensors
+Information derived directly from the real world.
+
+What do we mean by direct?
+
+* Voltages
+* Presence
+* etc.
+
+### Interpret Data
+How to abstract sensor values into assumptions about the real world.
+
+Perception is limited by:
+
+* Physical Sensory ability
+* Method of reading the sensors
+* The assumptions made
+
+### Performing actions and reactions
+React to the sensor in a pre-defined way (reactive).
+
+Store away for later use (deliberative).
+
+More on this later in the course.
+
+###The problem
+Sensor data may be wrong.
+
+Data from different sensors may or may not match.
+
+Some sensor data can take longer to process than others, so there may be time lags.
+
+Sensor data coming in from different sensors may be coming from different areas of the environment.
+
+Deciding what to believe is a difficult task.
 
 
