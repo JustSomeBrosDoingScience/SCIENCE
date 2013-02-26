@@ -607,3 +607,31 @@ $$m_1 \dagger m_2$$
 $m_2$ overrides elements in $m_1$. If an element in exists in both $m_1$ and $m_2$ then the return from $m_2$ is used, otherwise it's just the union of the two maps.
 
 
+Sequences
+---------
+
+Given a type $X$, we can have *sequences* of elements of $X$.
+
+The types of such sequences is denoted by $X*$
+
+Sequences are denoted by:
+
+$$\left[ a,b,c \right]$$
+
+Where:
+
+$$ a,b,c, \in X $$
+
+
+###Operations
+
+------------------------ ----------------------------- --------------------
+$hd\_$                   $X* \rightarrow X$            head (first element)
+$tl\_$                   $X* \rightarrow X*$           tail
+$len\_$                  $X* \rightarrow N$            length
+$elems\_$                $X* \rightarrow X\text{-set}$ set of elements
+$\_(\_)$                 $X \times N_1 \rightarrow X$  element selection
+$\_ \curvearrowright \_$ 
+------------------------ ----------------------------- --------------------
+
+
