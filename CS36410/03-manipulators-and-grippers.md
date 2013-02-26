@@ -103,3 +103,7 @@ Wrists
 Wrist provides orientation (yaw, pitch, yaw).
 
 
+Grippers
+--------
+
+Vacuum, Electromagnetic, Fingers, End of arm tooling.
