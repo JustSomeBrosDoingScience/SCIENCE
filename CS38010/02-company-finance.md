@@ -201,4 +201,91 @@ Risk versus reward.
 Dragons Den. I'm out.
 
 
+Balance Sheets
+--------------
+
+Time for motherfucking spreadsheets (in space).
+
+Snapshot on a particular date.
+
+How much are you worth?
+
+* Assets, fixed and liquid (current).
+
+How much do you owe?
+
+* Tax
+* VAT
+* Creditors
+* Bank Loans
+* Shareholders
+
+$$ Assets = Liabilities + Shareholders\text{ }Equity $$
+
+###P/L Cost Overheads
+
+* Wages
+* NI
+* Rent
+* Rates - Business and Water
+* Gas and Electricity
+* Telephone, ISP
+* Postage, Printing, Stationary
+* Advertising
+* Insurance
+* Repairs and Maintenance
+* Interest Payments
+* Bank charges
+* Depreciation
+* Travel
+* Legal
+* Subscriptions and Periodicals
+
+###Capital Equipment
+
+Capital Equipment does not appear in the P/L, it is taken from the cashflow and the depreciation is treated as a cost in the P/L.
+
+
+###Rhys' Tip for the Assignment (of the week)
+
+Projected profile/loss worked out every month. Cashflow on a monthly basis. Balance sheet at the end of the year.
+
+
+###Example Startup
+
+Shareholders raise: £50,000
+
+Cash goes in the bank.
+
+After trading for a while:
+
+Sales: £10,000 (invoiced)
+
+VAT: £1,750
+
+Purchases: £2,000
+
+Assets               Liabilities and Shareholders
+---------            ----------------------------
+Receivables £11,750  ...
+Cash on hand $48,000 ...
+Computers £2,000     ...
+Total £61,750        ...
+
+Receivables are things that haven't been paid, but have been invoiced/similar.
+
+
+Remember this shit
+------------------
+
+Try this by purchasing items on credit to create liabilities, you put how much you owe on the liabilities side and the new item into your assets (this balances).
+
+When you pay it off you lose the liability on one side and the cash from your asset side.
+
+Reduce the profit (shareholders equity) by the depreciate to date, balances with loss of same amount on the assets side of the equation.
+
+Balances sheets **balance**.
+
+Balance sheets run vertically.
+
 
