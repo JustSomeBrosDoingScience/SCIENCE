@@ -62,4 +62,46 @@ Big problem with processing time.
 
 World model is the idealised model of the world.
 
+"Brain" is the bottleneck.
 
+Difficulty when working with dimensions, etc.
+
+
+Agents Architecture
+-------------------
+
+Each agent has a level of competence, no individual is able to complete the whole task.
+
+Together and linking through cues agents are able to complete a task.
+
+
+Hybrid Paradigm
+---------------
+
+Uses all primitives. A combination of both.
+
+Behaviour (`SENSE-ACT`) primitive created by directive from `PLAN` primitive. Behaviour primitives
+are effectively reactive systems.
+
+Decomposes tasks into subtasks; figuring out which behaviours are best to achieve subtasks.
+
+Planner can eavesdrop on behaviours.
+
+
+Evaluation of Paradigms
+-----------------------
+
+###Criteria
+* Modularity
+* Niche target ability
+* Portability
+* Robustness
+
+
+###Reactive
+
+
+###Deliberative
+
+
+###Hybrid
