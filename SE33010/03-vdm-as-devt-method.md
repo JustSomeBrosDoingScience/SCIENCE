@@ -51,4 +51,6 @@ We must not allow repetitions in our sequences because the same employee cannot 
 
 However, the set $\left\{{p,q}\right\}$ could be represented by $\left[{p,q}\right]$ or by $\left[{q,p}\right]$
 
+A completely rigorous development down to programming language, then the programming language has to be formally specified.
+
 
