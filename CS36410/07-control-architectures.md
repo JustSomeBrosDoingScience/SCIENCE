@@ -98,10 +98,3 @@ Evaluation of Paradigms
 * Robustness
 
 
-###Reactive
-
-
-###Deliberative
-
-
-###Hybrid
