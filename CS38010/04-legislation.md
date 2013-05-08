@@ -1,12 +1,55 @@
 Legislation
 ===========
 
-Talked about some law stuff.
+
+
+Criminal Law
+------------
+Represents society's view of what is acceptable behaviour and what is not. The police (and some 
+other agencies) are responsible for apprehending those who break criminal law.
+
+Society brings then before a court and punishment takes the form of imprisonment, a fine, 
+community service, etc.
+
+
+Civil Law
+---------
+Regulates the relationship between people. Action is initiated by the aggrieved party (the 
+*claimant*, formerly - and still in the USA - the *plaintiff*).
+
+
+Standards of Proof
+------------------
+To convict someone of criminal offence, the prosecution must prove *beyond reasonable doubt* that
+the defendant is guilty.
+
+To obtain a judgement in a civil court, it is only necessary to establish the facts *on the 
+balance of probabilities*.
+
+
+Natural persons and legal persons
+---------------------------------
+Civil law is concerned with relationships between people. Therefore, unless a company is 
+incorporated (a legal person) civil law is not applicable to a company.
+
+
+Common Law
+----------
+Common law works by precedent (based on previous judgements). The judge may decide that a previous
+judgement is no longer applicable. All countries are considered in common law.
+
+
+Case Law
+--------
+Not all law may be clear so case law is the judges interpretation of a law.
+
 
 Secondary Legislation
 ---------------------
 
-An act of parliament often given the government power to introduce regulations (*statutory instruments*) that are laid before Parliament but are debated only if a member specifically calls for a debate.i
+An act of parliament often given the government power to introduce regulations (*statutory 
+instruments*) that are laid before Parliament but are debated only if a member specifically calls 
+for a debate.
 
 ###Examples:
 
