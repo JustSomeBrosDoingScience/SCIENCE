@@ -1,5 +1,10 @@
+Worksheet 1
+===========
+
+##Question 1
 Show, by constructing the appropriate truth tables, that:
 
+###1.a
 $$\neg P,P \lor Q \models Q$$
 
 |c|c||c|c||c|
@@ -10,6 +15,8 @@ T & F & F & T & F\
 F & T & T & T & T\
 F & F & T & F & F\
 
+
+###1.b
 $$P \land Q \models P \lor Q$$
 
 |c|c||c||c|
@@ -20,6 +27,8 @@ T & F & F & T\
 F & T & F & T\
 F & F & F & F\
 
+
+###1.c
 $$P \Rightarrow Q, Q \Rightarrow R \models P \Rightarrow R$$
 
 |c|c|c||c|c||c|
@@ -35,8 +44,11 @@ F & T & F & T & F & T\
 F & F & T & T & T & T\
 F & F & F & T & T & T\
 
+
+##Question 2
 Show, by constructing the appropriate truth tables, that:
 
+###2.a
 $$\models (A \land B) \Leftrightarrow (\neg(\neg A \lor \neg B))$$
 
 |c|c||c|c||c|
@@ -48,6 +60,8 @@ T & F & F & F & T\
 F & T & F & F & T\
 F & F & F & F & T\
 
+
+###2.b
 $$\models (A \Rightarrow B) \Leftrightarrow (\neg A \lor B)$$
 
 |c|c||c|c||c|
@@ -59,6 +73,8 @@ T & F & F & F & T\
 F & T & T & T & T\
 F & F & T & T & T\
 
+
+###2.c
 $$\models (A \Leftrightarrow B) \Leftrightarrow ((A \Rightarrow B) \land (B \Rightarrow A))$$
 
 |c|c||c|c|c|c||c|
@@ -74,17 +90,27 @@ F & F & T & T & T & T & T\
 Using the results above, deduce than any proposition is logically
 equivalent to one written using only the operators $\neg$ and $\lor$.
 
-$$\begin{aligned*}
-\intertext{First, we know:}
-A \land B &\equiv \neg(\neg A \lor \neg B)
-\intertext{And:}
-A \Rightarrow B &\equiv \neg A \lor B
-\intertext{And:}
-A \Leftrightarrow B &\equiv (A \Rightarrow B) \land (B \Rightarrow B)
-\intertext{Then using this, we can deduce:}
-A \Leftrightarrow B &\equiv (\neg A \lor B) \land (A \lor \neg B)
-\intertext{Substituting out the $\land$:}
-A \Leftrightarrow B &\equiv \neg(\neg(\neg A \lor B) \land \neg(A \lor \neg B))\end{aligned*}$$
+---
+
+First, we know:
+
+$$A \land B \equiv \neg(\neg A \lor \neg B)$$
+
+And:
+
+$$A \Rightarrow B \equiv \neg A \lor B$$
+
+And:
+
+$$A \Leftrightarrow B \equiv (A \Rightarrow B) \land (B \Rightarrow B)$$
+
+Then using this, we can deduce:
+
+$$A \Leftrightarrow B \equiv (\neg A \lor B) \land (A \lor \neg B)$$
+
+Substituting out the $\land$:
+
+$$A \Leftrightarrow B &\equiv \neg(\neg(\neg A \lor B) \land \neg(A \lor \neg B))\end$$
 
 Define the operator $|$ (*nand*) by the truth table:
 
