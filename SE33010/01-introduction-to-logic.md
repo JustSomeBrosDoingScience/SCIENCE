@@ -90,31 +90,31 @@ Example of a boolean type.
 
 ```
 INITIAL
-		boolean
+  boolean
 
 SORT
-		bool
+  bool
 
 CONSTANTS
-		true		: bool
-		false		: bool
+  true   : bool
+  false  : bool
 
 OPERATIONS
-		not _		: bool -> bool
-		_ or _		: bool, bool -> bool
-		_ and _		: bool, bool -> bool
-		_ impl _	: bool, bool -> bool
-		_equiv _	: bool, bool -> bool
+  not _	     : bool -> bool
+  _ or _     : bool, bool -> bool
+  _ and _    : bool, bool -> bool
+  _ impl _   : bool, bool -> bool
+  _ equiv _  : bool, bool -> bool
 
 EQUATIONS
-		not(not(A))	= A
-		A or (B or C)	= (A or B) or C
-		A or B		= B or A
-		A or true	= true
-		A or false	= A
-		A and B		= not(not(A) or not(b))
-		A impl B	= not(A) or B
-		A equiv B	= (A impl B) and (B impl A)
+  not(not(A))   = A
+  A or (B or C) = (A or B) or C
+  A or B        = B or A
+  A or true     = true
+  A or false    = A
+  A and B       = not(not(A) or not(b))
+  A impl B      = not(A) or B
+  A equiv B     = (A impl B) and (B impl A)
 END
 ```
 
@@ -125,47 +125,47 @@ The mathematical branch of *category theory* is needed to reason about such spec
 
 ```
 INITIAL
-		lists (elem with {_ eq _ : elem,elem -> bool; undef : -> elem})
+  lists (elem with {_ eq _ : elem,elem -> bool; undef : -> elem})
 
 USES
-		boolean
+  boolean
 
 SORT
-		list
+  list
 
 CONSTANTS
-		empty	: list
-		undef	: list
+  empty  : list
+  undef  : list
 
 OPERATIONS
-		_ . _			: elem,list -> list
-		first _			: list -> elem
-		rest _			: list -> list
-		is-undef _		: list -> bool
-		_ is-member-of _	: elem,list -> bool
-		_ eq _ 			: list,list -> bool
-		at-end _		: list -> bool
+  _ . _             : elem,list -> list
+  first _           : list -> elem
+  rest _            : list -> list
+  is-undef _        : list -> bool
+  _ is-member-of _  : elem,list -> bool
+  _ eq _            : list,list -> bool
+  at-end _          : list -> bool
 
 EQUATIONS
-		first(empty)		= undef
-		first(undef)		= undef
-		first(A.B)		= A
-		rest(empty)		= undef
-		rest(undef)		= undef
-		rest(A.B)		= B
-		is-undef(empty)		= false
-		is-undef(undef)		= true
-		is-undef(A.B)		= false
-		E is-member-of undef	= false
-		E is-member-of empty	= false
-		E is-member-of (A.B)	= (E eq A) or (E is-member-of B)
-		(A.B) eq (C.D)		= (A eq C) and (B eq D)
-		empty eq empty		= true
-		(A.B) eq empty		= false
-		A eq B			= B eq A
-		at-end(empty)		= true
-		at-end(undef)		= false
-		at-end(A.B)		= false
+  first(empty)         = undef
+  first(undef)         = undef
+  first(A.B)           = A
+  rest(empty)          = undef
+  rest(undef)          = undef
+  rest(A.B)            = B
+  is-undef(empty)      = false
+  is-undef(undef)      = true
+  is-undef(A.B)        = false
+  E is-member-of undef = false
+  E is-member-of empty = false
+  E is-member-of (A.B) = (E eq A) or (E is-member-of B)
+  (A.B) eq (C.D)       = (A eq C) and (B eq D)
+  empty eq empty       = true
+  (A.B) eq empty       = false
+  A eq B               = B eq A
+  at-end(empty)        = true
+  at-end(undef)        = false
+  at-end(A.B)          = false
 END
 ```
 

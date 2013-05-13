@@ -130,13 +130,13 @@ Normal brackets $($ and $)$.
 The syntax is simply:
 
 ```
-proposition		::= letter
-				 | ¬proposition
-				 | proposition ∧ proposition
-				 | ptopodiyion V proposition
-				 | proposition -> proposition
-				 | proposition <-> proposition
-				 | (proposition)
+proposition ::= letter
+              | ¬proposition
+              | proposition ∧ proposition
+              | proposition V proposition
+              | proposition -> proposition
+              | proposition <-> proposition
+              | (proposition)
 ```
 
 Examples of valid wffs:
@@ -328,11 +328,11 @@ Suppose we have to define multiplication:
 $$ multp(i,j)  $$
 
 ```
-    if   i = 0
-    then 0
-    else if   is-even(i)
-         then 2 * multp(i/2, j)
-         else j + multp(i-1, j)
+  if   i = 0
+  then 0
+  else if   is-even(i)
+    then 2 * multp(i/2, j)
+    else j + multp(i-1, j)
 ```
 
 Then the proof obligation becomes:
@@ -462,12 +462,12 @@ The general form of a composite type definition is:
 
 ```
 Name ::
-    s1 : T1
-    s2 : T2
-    .
-    .
-    .
-    sn : Tn
+  s1 : T1
+  s2 : T2
+  .
+  .
+  .
+  sn : Tn
 ```
 
 This type has associated with it the constructor:
@@ -481,9 +481,9 @@ And selector functions:
 ```
 s1 : Name -> T1
 s2 : Name -> T2
-      .
-      .
-      .
+.
+.
+.
 sn : Name -> Tn
 ```
 
@@ -491,8 +491,8 @@ Example:
 
 ```
 Date ::
-    day : {1,...,366}
-    year : {1901,...,2099}
+  day : {1,...,366}
+  year : {1901,...,2099}
 ```
 
 Automatically gives us these functions:
@@ -517,8 +517,8 @@ Alternatively:
 
 ```
 valid-Date(dt) ?
-    let mk-Date(d,y) = dt
-    in is-leapyear(y) V d <= 365
+  let mk-Date(d,y) = dt
+  in is-leapyear(y) V d <= 365
 ```
 
 **Note:** Because of the restricted year range our definition of leap year works.
@@ -527,10 +527,10 @@ Data type **invariants** can be added to composite types using the construction:
 
 ```
 Date ::
-    day : {1,...,366}
-    year : {1901,...,2099}
+  day : {1,...,366}
+  year : {1901,...,2099}
 where
-inv-Date(mk-Date(d,y)) ? is-leapyear(y) V d <= 365
+  inv-Date(mk-Date(d,y)) ? is-leapyear(y) V d <= 365
 ```
 
 Now only valid dates will be allowed on the constructor.
@@ -541,9 +541,9 @@ Optional fields are allowed in composite types, denoted by `[...]`, and an omitt
 
 ```
 Record ::
-    day : {1,...,366}
-    year : {1901,...,2099}
-    valid : [ERROR]
+  day : {1,...,366}
+  year : {1901,...,2099}
+  valid : [ERROR]
 ```
 
 Useful for recursive data types.
@@ -553,8 +553,8 @@ Useful for recursive data types.
 ```
 List = [Listelt]
 Listelt ::
-    hd : N
-    tl : List
+  hd : N
+  tl : List
 
 nil in List
 mk-Listelt(3,nil) in List
@@ -562,10 +562,10 @@ mk-Listelt(1,mk-Listelt(2,mk-Listelt(3,nil))) in List
 
 lsum : List -> N
 lsum(l) ?
-    cases l:
-        nil -> 0
-        mk-Listelt(hd,tl) -> hd + lsum(tl)
-    end
+  cases l:
+    nil -> 0
+    mk-Listelt(hd,tl) -> hd + lsum(tl)
+  end
 ```
 
 ####Binary Search Tree Example
@@ -573,17 +573,17 @@ lsum(l) ?
 ```
 Tree = [Node]
 Node ::
-    left : Tree
-    value : N
-    right : Tree
+  left : Tree
+  value : N
+  right : Tree
 where
-inv-Node(mk-Node(left,value,right)) ?
+  inv-Node(mk-Node(left,value,right)) ?
     (forall(lv) in values(left) assert lv < value) and (forall(rv) in values(right) assert value < rv)
 values : Tree -> N-set
 values(t) ?
-    cases t of
-        nil -> {}
-        mk-Node(left,value,right) -> values(left) union {value} union values(right)
+  cases t of
+    nil -> {}
+    mk-Node(left,value,right) -> values(left) union {value} union values(right)
 ```
 
 
