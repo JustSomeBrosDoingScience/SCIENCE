@@ -8,6 +8,33 @@ Fewer limitations than before, power is the biggest issue.
 Interpretation performed by observer.
 
 
+Logical Sensors
+---------------
+A logical sensor is a unit of sensing or module that supplies a particular percept. It consists of the signal processing from the physical sensor and the software processing needed to extract the percept. It is ythe functional building block for perception.
+
+Encourages modular design.
+
+
+Behavioural Sensor Fusion
+------------------------
+*Sensor fusion* is a brad term for any process that combines information from multiple sensors into a single percept.
+
+The motivation for this stems from three basic combinations:
+
+* Redundant
+* Complementary
+* Coordinated
+
+Can be used when a particular sensor is too imprecise or noisy to give reliable data. Adding a second sensor can give another "vote" for the percept.
+
+This is to try and avoid high *false positives* and *false negatives* rates.
+
+*Physical redundancy* allow two similar sensors to perceive objects from two different locations (one sensor might be better at sensing lower objects whilst the other high objects).
+
+*Logical redundancy* is the use of different algorithms to process the information from a single sensor.
+
+
+
 Passive sensors
 ---------------
 
@@ -101,6 +128,8 @@ How does the computation of the sensor data scale?
 
 Time is the biggest factor involved with this generally ;)
 
+Big-O notation.
+
 
 ### Interpretation Reliability
 
@@ -109,6 +138,8 @@ How reliable will that sensor be in a particular environment?
 
 Attributes for a sensor suite
 -----------------------------
+
+Surviving a failure is referred to as *fault tolerance*.
 
 ### Simplicity
 

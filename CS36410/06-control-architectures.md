@@ -68,6 +68,13 @@ World model is the idealised model of the world.
 
 Difficulty when working with dimensions, etc.
 
+###Closed World Assumption and the Frame Problem
+The *closed world assumption* says that the world model contains everything the robot needs to know; there can be no surprises.
+
+If this assumption is violated the robot may not be able to function correctly.
+
+The *frame problem* is the size complexity of a problem given the exponential nature of the real world.
+
 
 Agents Architecture
 -------------------

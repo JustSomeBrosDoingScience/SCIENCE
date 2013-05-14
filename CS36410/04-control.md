@@ -46,12 +46,14 @@
 ## Legged systems
 
 Static stable walkers: 
+
 * Always in a stable equilibrium
 * Not biologically plausible - not how we work
 * Control first, morphology second
 * Low energy efficiency
 
 Dynamic stable walkers:
+
 * Center of gravity is outside of the foot area
 * Mostly not in stable equilibrium
 * Biologically plausible
