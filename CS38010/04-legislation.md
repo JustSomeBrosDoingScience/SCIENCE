@@ -44,6 +44,11 @@ Case Law
 Not all law may be clear so case law is the judges interpretation of a law.
 
 
+Statute Law
+-----------
+
+Statue law is laid down by Acts of Parliament, often referred to as **legislaton**.
+
 Secondary Legislation
 ---------------------
 

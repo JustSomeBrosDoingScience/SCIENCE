@@ -141,7 +141,7 @@ Grounds for fair dismissal:
 * Capability
 * Redundancy
 * Statutory requirement
-* Something else (*A: huh?*)
+* *Any other reason*
 
 But employer must follow correct procedures (**due process**).
 
@@ -156,6 +156,19 @@ Unfair dismissal is:
 * Dismissal for *not* being a member of a trade union
 * and many more...
 
+###Redundancy
+Dismissals because of redundancy occur when an employer no longer needs people to do their jobs. In most cases employees will be entitled to compensation based on their age, salary and years of service. The law lays down the minimum level of compensation, but it is typical for employers to pay more than this.
+
+If the employer is intending to make 20 or more employees redundant over a period of 90 or less, the employees (or their representatives) have a right to be consulted.
+
+There are two definitions of redundancy in British law. For the purposes of entitlement to compensation, redundancy occurs when an employee is dismissed because the employer no longer needs employees to do that job in that place.
+
+In determining the right to consultation, however, redundancy is defined as occurring when the dismissal for a reason or reasons not relating to the individual employee.
+
+It is common practise to use a stack based system when making employees redundant (LIFO), this is acceptable to unions and courts.
+
+Dismissal for redundancy can easily become unfair dismissal if individuals are selected for redundancy in some other way (as with anything else).
+
 ####Constructive Dismissal
 A fundamental breach, by the employer, of an employee's contract of employment, which effectively indicates that the employer no longer intends to be bound by it.
 
@@ -169,6 +182,11 @@ Protects employees who:
     * Reasonably believed they would have been victimised if it was raised internally or with a regulator, *or*
     * Reasonably believed there would be a cover-up if they raised it internally and there was no regulator, *or*
     * Had already been raised internally or with a regulator and nothing had been done.
+
+###Wrongful Dismissal
+Wrongful dismissal is significantly different from unfair dismissal, an action for wrongful dismissal is an action for damages brought by an employee against an employer for breach of the contract of employment. It is an action under the common law and for this reason is not subject to the maxima laid down by statue for unfair dismissal.
+
+Typically brought by very senior or highly paid employees who can make a reasonable case for compensation resulting from their employer's breaking of contract.
 
 ###Contracts of Employment
 Employment brings a legal contract into existence, whether it be in writing or not. Employers must provide employees with a written statement of the main terms of the employment.
