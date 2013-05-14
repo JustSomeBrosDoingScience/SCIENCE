@@ -13,7 +13,7 @@ Robotics Paradigms
 ------------------
 
 * Reactive
-* Deliberative
+* Deliberative/Hierarchical
 * Hybrid
 
 
@@ -53,6 +53,8 @@ Advantage that you're acting immediately with the real world. Lots of knowledge 
 
 Deliberative Paradigm
 ---------------------
+
+Also known as the hierarchical paradigm.
 
 Uses `SENSE`, `PLAN` and `ACT` primitives. `ACT` primitive only works from directives.
 
