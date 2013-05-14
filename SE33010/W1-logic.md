@@ -7,42 +7,39 @@ Show, by constructing the appropriate truth tables, that:
 ###1.a
 $$\neg P,P \lor Q \models Q$$
 
-|c|c||c|c||c|
-
-$P$ & $Q$ & $\neg P$ & $P \lor Q$ & $Q$\
-T & T & F & T & T\
-T & F & F & T & F\
-F & T & T & T & T\
-F & F & T & F & F\
+ $P$   $Q$   $\neg P$   $P \lor Q$   $Q$
+----- ----- ---------- ------------ -----
+T     T     F          T            T
+T     F     F          T            F
+F     T     T          T            T
+F     F     T          F            F
 
 
 ###1.b
 $$P \land Q \models P \lor Q$$
 
-|c|c||c||c|
-
-$P$ & $Q$ & $P \land Q$ & $P \lor Q$\
-T & T & T & T\
-T & F & F & T\
-F & T & F & T\
-F & F & F & F\
+ $P$   $Q$   $P \land Q$   $P \lor Q$
+----- ----- ------------- ------------
+T     T     T             T
+T     F     F             T
+F     T     F             T
+F     F     F             F
 
 
 ###1.c
 $$P \Rightarrow Q, Q \Rightarrow R \models P \Rightarrow R$$
 
-|c|c|c||c|c||c|
 
-$P$ & $Q$ & $R$ & $P \Rightarrow Q$ & $Q \Rightarrow R$ &
-$P \Rightarrow R$\
-T & T & T & T & T & T\
-T & T & F & T & F & F\
-T & F & T & F & T & T\
-T & F & F & F & T & F\
-F & T & T & T & T & T\
-F & T & F & T & F & T\
-F & F & T & T & T & T\
-F & F & F & T & T & T\
+ $P$   $Q$   $R$   $P \Rightarrow Q$   $Q \Rightarrow R$   $P \Rightarrow R$
+----- ----- ----- ------------------- ------------------- -------------------
+T     T     T     T                   T                   T
+T     T     F     T                   F                   F
+T     F     T     F                   T                   T
+T     F     F     F                   T                   F
+F     T     T     T                   T                   T
+F     T     F     T                   F                   T
+F     F     T     T                   T                   T
+F     F     F     T                   T                   T
 
 
 ##Question 2
@@ -142,25 +139,42 @@ T & F & T & T & T\
 F & T & T & T & T\
 F & F & F & F & T\
 
+
+###???
+
 Using Q2 and these results, deduce that any proposition is logically
 equivalent to one written using only the operator $|$.
 
-$$\begin{aligned*}
-\intertext{We know:}
-\neg A &\equiv A | A
-\intertext{And:}
-A \lor B &\equiv (A|A)|(B|B)
-\intertext{And as we have already deduced that any proposition can be written using $\neg$ and $\lor$, we can just substitute in the above identities to replace both these operators in and proposition.}
-A \land B &\equiv \neg(\neg A \lor \neg B) \\
-&\equiv \neg(\neg(A|A) | \neg(B|B)) \\
-\intertext{Substitute $A|A$ for $\neg A$ to cancel out the double negatives.}
-&\equiv \neg(A | B) \\
-\intertext{Therefore:}
-A \land B &\equiv (A|B)|(A|B)
-\intertext{And:}
-A \lor \neg B \lor C &\equiv ((A|A)|(\neg B|\neg B)) \lor C \\
-&\equiv ((A|A)|B) \lor C \\
-&\equiv ((A|A)|B)|(A|A)|B)|(C|C)\end{aligned*}$$
+
+We know:
+
+$$\neg A \equiv A | A$$
+
+And:
+
+$$A \lor B \equiv (A|A)|(B|B)$$
+
+And as we have already deduced that any proposition can be written using $\neg$ and $\lor$, we can just substitute in the above identities to replace both these operators in and proposition.
+
+$$A \land B \equiv \neg(\neg A \lor \neg B)$$
+
+$$\equiv \neg(\neg(A|A) | \neg(B|B))$$
+
+Substitute $A|A$ for $\neg A$ to cancel out the double negatives.
+
+$$\equiv \neg(A | B)$$
+
+Therefore:
+
+$$A \land B \equiv (A|B)|(A|B)$$
+
+And:
+
+$$A \lor \neg B \lor C \equiv ((A|A)|(\neg B|\neg B)) \lor C$$
+
+$$\equiv ((A|A)|B) \lor C$$
+
+$$\equiv ((A|A)|B)|(A|A)|B)|(C|C)$$
 
 Prove the following:
 
