@@ -95,3 +95,30 @@ $$\therefore \; a > 0 \Rightarrow \mathcal{O}(a-1/x)$$
 For a sequence of statements $S_1;S_2;\dots;S_n$, there is the rule:
 
 $$\frac{ \{\mathcal{I}\}S_1\{\mathcal{J}_1\}, \{\mathcal{J}_1\}S_2\{\mathcal{J}_2\},\dots,\{\mathcal{J}_n\}S_n\{\mathcal{O}\} }{ \{\mathcal{I}\}S_1;S_2;\dots;S_n\{\mathcal{O}\} }$$
+
+
+##Conditional Statements
+
+$$\frac{ \{\mathcal{I} \land B\}S_1\{\mathcal{O}\}, \{\mathcal{I} \land \neg B\}S_2\{\mathcal{O}\} }{ \{\mathcal{I} \mathtt{ if(B) } S_1 \mathtt{ else } S_2 \{\mathcal{O}\} }$$
+
+Under the assumption $B$ has no side effects.
+
+If there is no `else` statement then:
+
+
+$$\frac{ \{\mathcal{I} \land B\}S\{\mathcal{O}\}, \mathcal{I} \land \neg B \Rightarrow \mathcal{O} }{ \{\mathcal{I} \mathtt{ if(B) } S \{\mathcal{O}\} }$$
+
+Again assuming $B$ has no side effects.
+
+
+##Iterations
+
+The while loop can be specified as follows:
+
+$$\frac{ \{\mathcal{I} \land B\} S \{\mathcal{I}\} }{ \{\mathcal{I}\} \mathtt{ while(B) } S(\mathcal{I} \land \neg B) }$$
+
+Assuming $B$ has no side effects.
+
+It is useful to introduce the idea of a **loop invariant**; a formula ($\mathcal{L}$) that remains true after each iteration of the loop, leading to the following rule:
+
+$$\frac{ \mathcal{I} \Rightarrow \mathcal{L}, \{\mathcal{L} \land  B\}S\{\mathcal{L}\}, \mathcal{L} \land \neg B \Rightarrow \mathcal{O} }{ \{\mathcal{I}\}\texttt{ while(B) } S \{\mathcal{O}\} }$$
